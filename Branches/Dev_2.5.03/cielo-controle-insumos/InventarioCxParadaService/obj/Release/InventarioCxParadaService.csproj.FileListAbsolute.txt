@@ -1,0 +1,14 @@
+C:\Fontes\Dev_2.5.0_MIG21\cielo-controle-insumos\InventarioCxParadaService\bin\Release\InventarioCxParadaService.exe.config
+C:\Fontes\Dev_2.5.0_MIG21\cielo-controle-insumos\InventarioCxParadaService\bin\Release\InventarioCxParadaService.exe
+C:\Fontes\Dev_2.5.0_MIG21\cielo-controle-insumos\InventarioCxParadaService\bin\Release\InventarioCxParadaService.XmlSerializers.dll
+C:\Fontes\Dev_2.5.0_MIG21\cielo-controle-insumos\InventarioCxParadaService\bin\Release\InventarioCxParadaService.pdb
+C:\Fontes\Dev_2.5.0_MIG21\cielo-controle-insumos\InventarioCxParadaService\bin\Release\EntityFramework.dll
+C:\Fontes\Dev_2.5.0_MIG21\cielo-controle-insumos\InventarioCxParadaService\bin\Release\EntityFramework.xml
+C:\Fontes\Dev_2.5.0_MIG21\cielo-controle-insumos\InventarioCxParadaService\obj\Release\InventarioCxParadaService.csprojAssemblyReference.cache
+C:\Fontes\Dev_2.5.0_MIG21\cielo-controle-insumos\InventarioCxParadaService\obj\Release\InventarioCxParadaService.ProjectInstaller.resources
+C:\Fontes\Dev_2.5.0_MIG21\cielo-controle-insumos\InventarioCxParadaService\obj\Release\InventarioCxParadaService.csproj.GenerateResource.cache
+C:\Fontes\Dev_2.5.0_MIG21\cielo-controle-insumos\InventarioCxParadaService\obj\Release\InventarioCxParadaService.csproj.CoreCompileInputs.cache
+C:\Fontes\Dev_2.5.0_MIG21\cielo-controle-insumos\InventarioCxParadaService\obj\Release\InventarioCxParadaService.csproj.CopyComplete
+C:\Fontes\Dev_2.5.0_MIG21\cielo-controle-insumos\InventarioCxParadaService\obj\Release\InventarioCxParadaService.exe
+C:\Fontes\Dev_2.5.0_MIG21\cielo-controle-insumos\InventarioCxParadaService\obj\Release\InventarioCxParadaService.pdb
+C:\Fontes\Dev_2.5.0_MIG21\cielo-controle-insumos\InventarioCxParadaService\obj\Release\InventarioCxParadaService.XmlSerializers.dll

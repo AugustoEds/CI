@@ -1,0 +1,449 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="YepLogModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="ESCADPRO">
+    <Key>
+      <PropertyRef Name="CODIGO" />
+    </Key>
+    <Property Name="CODIGO" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="DESCRICAO" Type="varchar" MaxLength="100" />
+    <Property Name="NUM_DESENHO" Type="varchar" MaxLength="40" />
+    <Property Name="DATA_DESENHO" Type="date" />
+    <Property Name="GRUPO" Type="varchar" MaxLength="4" />
+    <Property Name="SUB_GRUPO" Type="varchar" MaxLength="4" />
+    <Property Name="TIPO" Type="int" />
+    <Property Name="COD_ESTRUTURA" Type="varchar" MaxLength="15" />
+    <Property Name="UNIDADE" Type="varchar" MaxLength="3" />
+    <Property Name="PESO_LIQUIDO" Type="float" />
+    <Property Name="SITUACAO" Type="varchar" MaxLength="10" />
+    <Property Name="ESTOQUE_MAXIMO" Type="float" />
+    <Property Name="ESTOQUE_MINIMO" Type="float" />
+    <Property Name="CLASSIFICACAO_FISCAL" Type="varchar" MaxLength="12" />
+    <Property Name="ALIQUOTA_IPI" Type="float" />
+    <Property Name="FLAG_RED_ICMS" Type="varchar" MaxLength="3" />
+    <Property Name="DATA_CAD" Type="date" />
+    <Property Name="DATA_ALT" Type="date" />
+    <Property Name="ULT_MOV" Type="date" />
+    <Property Name="FLAG_VALORIZA" Type="varchar" MaxLength="1" />
+    <Property Name="SITUACAO_INV" Type="varchar" MaxLength="11" />
+    <Property Name="FLAG_CRED_ICMS" Type="varchar" MaxLength="3" />
+    <Property Name="FLAG_CRED_IPI" Type="varchar" MaxLength="3" />
+    <Property Name="ORIGEM" Type="int" />
+    <Property Name="COD_ALTERNATIVO" Type="varchar" MaxLength="15" />
+    <Property Name="PRECO_PECA" Type="float" />
+    <Property Name="PRECO_VENDA" Type="float" />
+    <Property Name="MARGEM_LUCRO" Type="float" />
+    <Property Name="CUSTO_UNITARIO" Type="float" />
+    <Property Name="VERSAO_ATUAL" Type="int" />
+    <Property Name="UTILIZA_LOTE" Type="varchar" MaxLength="3" />
+    <Property Name="SOL_LOTE_FORN" Type="varchar" MaxLength="3" />
+    <Property Name="METODO_LOTE" Type="varchar" MaxLength="10" />
+    <Property Name="CHAVE_METODO" Type="varchar" MaxLength="20" />
+    <Property Name="DEF_LOTE_ENT" Type="varchar" MaxLength="12" />
+    <Property Name="NUM_LOTE_ENT" Type="int" />
+    <Property Name="DEF_LOTE_INV" Type="varchar" MaxLength="12" />
+    <Property Name="NUM_LOTE_INV" Type="int" />
+    <Property Name="SITUACAO_LOTE" Type="varchar" MaxLength="15" />
+    <Property Name="QTDE_CAIXA" Type="float" />
+    <Property Name="QTDE_PALLET" Type="float" />
+    <Property Name="REDUZIDO" Type="varchar" MaxLength="6" />
+    <Property Name="DESCRICAO_FAT" Type="varchar" MaxLength="200" />
+    <Property Name="CLASSIFICACAO_ITEM" Type="varchar" MaxLength="15" />
+    <Property Name="GRAMATURA" Type="float" />
+    <Property Name="TIPO_ONDA" Type="varchar" MaxLength="2" />
+    <Property Name="TEMPO_PREP" Type="float" />
+    <Property Name="TEMPO_OPER" Type="float" />
+    <Property Name="TEMPO_MAQ" Type="float" />
+    <Property Name="TEMPO_FABR" Type="float" />
+    <Property Name="QTDE_BASE" Type="float" />
+    <Property Name="DIAGONAL_MENOR" Type="float" />
+    <Property Name="DIAGONAL_MAIOR" Type="float" />
+    <Property Name="ESPESSURA" Type="float" />
+    <Property Name="CORDAO" Type="float" />
+    <Property Name="FLAG_CRED_PIS" Type="varchar" MaxLength="3" />
+    <Property Name="FLAG_CRED_COFINS" Type="varchar" MaxLength="3" />
+    <Property Name="TOLER_MENOR" Type="float" />
+    <Property Name="TOLER_MAIOR" Type="float" />
+    <Property Name="SENHA_CAD" Type="varchar" MaxLength="10" />
+    <Property Name="SENHA_ALT" Type="varchar" MaxLength="10" />
+    <Property Name="ANALISE_FIS_QUI" Type="int" />
+    <Property Name="ANALISE_MICROBI" Type="int" />
+    <Property Name="CODIGO_EAN_UCC" Type="varchar" MaxLength="14" />
+    <Property Name="QTDE_FRACIONADA" Type="float" />
+    <Property Name="FLAG_DESTAQUE_IPI" Type="varchar" MaxLength="3" />
+    <Property Name="PADRAO_LOTE" Type="varchar" MaxLength="20" />
+    <Property Name="FLAG_VERSAO" Type="varchar" MaxLength="3" />
+    <Property Name="FLAG_FICHA" Type="varchar" MaxLength="3" />
+    <Property Name="EMBALAGEM_PADRAO" Type="int" />
+    <Property Name="EXCECAO_NCM" Type="varchar" MaxLength="4" />
+    <Property Name="GENERO" Type="varchar" MaxLength="4" />
+    <Property Name="COD_SERVICO" Type="varchar" MaxLength="4" />
+    <Property Name="ALIQUOTA_ISS" Type="float" />
+    <Property Name="ULT_RG_VISANET_RFI" Type="int" />
+    <Property Name="ULT_RG_VISANET_LEG" Type="int" />
+    <Property Name="ULT_VISANET_PROV" Type="int" />
+    <Property Name="FABRICANTE" Type="varchar" MaxLength="10" />
+    <Property Name="SUCATA" Type="varchar" MaxLength="15" />
+    <Property Name="NPA" Type="varchar" MaxLength="15" />
+    <Property Name="RPA" Type="varchar" MaxLength="15" />
+    <Property Name="RPT_TRIAGEM" Type="varchar" MaxLength="15" />
+    <Property Name="RPT_REPARO" Type="varchar" MaxLength="15" />
+    <Property Name="TECN_DESCONTIN" Type="varchar" MaxLength="15" />
+    <Property Name="CAPACIDADE_VOLUME" Type="int" />
+    <Property Name="CODIGO_SAP" Type="varchar" MaxLength="15" />
+    <Property Name="RPT_GARANTIA" Type="varchar" MaxLength="15" />
+  </EntityType>
+  <EntityType Name="TB_CAIXA">
+    <Key>
+      <PropertyRef Name="ID_CAIXA" />
+    </Key>
+    <Property Name="ID_CAIXA" Type="int" Nullable="false" />
+    <Property Name="ID_FASE" Type="int" />
+    <Property Name="ID_PRE_REC_ITEM" Type="int" />
+    <Property Name="ID_STATUS_CAIXA" Type="int" />
+    <Property Name="QT_ITENS" Type="int" />
+    <Property Name="NR_ETIQUETA" Type="varchar" MaxLength="40" />
+    <Property Name="QT_CONT_CQ" Type="int" />
+    <Property Name="FL_IMPRESSO" Type="varchar" MaxLength="1" />
+    <Property Name="QT_CONT_REC" Type="int" />
+    <Property Name="ID_MOTIVO_RECUSA" Type="int" />
+    <Property Name="ID_LOCACAO_LOCAL" Type="int" />
+  </EntityType>
+  <EntityType Name="TB_INVENTARIO">
+    <Key>
+      <PropertyRef Name="ID_INVENTARIO" />
+    </Key>
+    <Property Name="ID_INVENTARIO" Type="int" Nullable="false" />
+    <Property Name="DT_INVENTARIO" Type="date" />
+    <Property Name="ID_USUARIO" Type="int" />
+    <Property Name="ID_STATUS_INVENTARIO" Type="int" />
+    <Property Name="DT_INICIO" Type="datetime" />
+    <Property Name="DT_ENCERRAMENTO" Type="datetime" />
+    <Property Name="DS_OBSERVACAO" Type="varchar" MaxLength="300" />
+    <Property Name="NR_INTERVALO_CX_PARADA" Type="int" />
+    <Property Name="NR_TEMPO_CX_PARADA" Type="int" />
+    <Property Name="DS_EMAIL_CX_PARADA" Type="varchar" MaxLength="5000" />
+  </EntityType>
+  <EntityType Name="TB_INVENTARIO_DESMEMB">
+    <Key>
+      <PropertyRef Name="ID_DESEMEMB" />
+    </Key>
+    <Property Name="ID_DESEMEMB" Type="int" Nullable="false" />
+    <Property Name="ID_INVENTARIO" Type="int" />
+    <Property Name="ID_CAIXA_ORIGINAL" Type="int" />
+    <Property Name="ID_CAIXA_DESTINO" Type="int" />
+  </EntityType>
+  <EntityType Name="TB_INVENTARIO_PAUSA">
+    <Key>
+      <PropertyRef Name="ID_INVENTARIO_PAUSA" />
+    </Key>
+    <Property Name="ID_INVENTARIO_PAUSA" Type="int" Nullable="false" />
+    <Property Name="ID_INVENTARIO" Type="int" />
+    <Property Name="DT_INICIO" Type="datetime" />
+    <Property Name="DT_FINAL" Type="datetime" />
+  </EntityType>
+  <EntityType Name="TB_ITENS_INVENTARIO">
+    <Key>
+      <PropertyRef Name="ID_ITEM_INVENTARIO" />
+    </Key>
+    <Property Name="ID_ITEM_INVENTARIO" Type="int" Nullable="false" />
+    <Property Name="ID_INVENTARIO" Type="int" />
+    <Property Name="ID_GRUPO" Type="varchar" MaxLength="8000" />
+    <Property Name="ID_LOCAL_ESTOQUE" Type="int" />
+    <Property Name="ID_CAIXA" Type="int" />
+    <Property Name="QT_ITENS" Type="int" />
+    <Property Name="ID_STATUS_ITEM_INVENTARIO" Type="int" />
+    <Property Name="DT_HR_P_CONTAGEM" Type="datetime" />
+    <Property Name="ID_USR_TORRE_P_CONTAGEM" Type="int" />
+    <Property Name="QT_P_CONTAGEM" Type="int" />
+    <Property Name="DT_HR_S_CONTAGEM" Type="datetime" />
+    <Property Name="ID_USR_TORRE_S_CONTAGEM" Type="int" />
+    <Property Name="QT_S_CONTAGEM" Type="int" />
+    <Property Name="DT_HR_T_CONTAGEM" Type="datetime" />
+    <Property Name="ID_USR_TORRE_T_CONTAGEM" Type="int" />
+    <Property Name="QT_T_CONTAGEM" Type="int" />
+    <Property Name="ID_DEPOSITO" Type="int" />
+    <Property Name="ID_SUBGRUPO" Type="varchar" MaxLength="4" />
+    <Property Name="ID_STATUS_CAIXA" Type="int" />
+    <Property Name="DT_HR_P_BIPAGEM" Type="datetime" />
+  </EntityType>
+  <EntityType Name="TB_PREC_REC_ITEM">
+    <Key>
+      <PropertyRef Name="ID_PRE_REC_ITEM" />
+    </Key>
+    <Property Name="ID_PRE_REC_ITEM" Type="int" Nullable="false" />
+    <Property Name="ID_PRE_REC" Type="int" />
+    <Property Name="QT_VOLUME" Type="numeric" Precision="14" Scale="2" />
+    <Property Name="QT_UNIDADE_VOLUME" Type="numeric" Precision="14" Scale="2" />
+    <Property Name="DT_INCLUSAO" Type="datetime" />
+    <Property Name="ID_USER_INC" Type="int" />
+    <Property Name="ID_ULT_ALTERACAO" Type="datetime" />
+    <Property Name="ID_USER_ULT_ALT" Type="int" />
+    <Property Name="ID_ITEM_YEP" Type="varchar" MaxLength="15" />
+    <Property Name="ID_INSPEC" Type="int" />
+    <Property Name="QT_REJEICAO" Type="int" />
+    <Property Name="FL_TESTE_FUNC_RAPIDO" Type="varchar" MaxLength="1" />
+    <Property Name="FL_TESTE_EXAME_VISUAL" Type="varchar" MaxLength="1" />
+    <Property Name="DS_OBSERVACAO" Type="varchar" MaxLength="3000" />
+  </EntityType>
+  <EntityType Name="TB_STATUS_ITEM_INVENTARIO">
+    <Key>
+      <PropertyRef Name="ID_STATUS_ITEM_INVENTARIO" />
+    </Key>
+    <Property Name="ID_STATUS_ITEM_INVENTARIO" Type="int" Nullable="false" />
+    <Property Name="DS_STATUS_ITEM_INVENTARIO" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="TB_TORRE_INVENTARIO">
+    <Key>
+      <PropertyRef Name="ID_TORRE_INVENTARIO" />
+    </Key>
+    <Property Name="ID_TORRE_INVENTARIO" Type="int" Nullable="false" />
+    <Property Name="DS_TORRE_INVENTARIO" Type="varchar" MaxLength="100" />
+    <Property Name="FL_ATIVO" Type="varchar" MaxLength="1" />
+    <Property Name="FL_REALIZA_T_CONTAGEM" Type="varchar" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="TB_TORRE_USR_INVENTARIO">
+    <Key>
+      <PropertyRef Name="ID_USR_TORRE_INVENTARIO" />
+    </Key>
+    <Property Name="ID_USR_TORRE_INVENTARIO" Type="int" Nullable="false" />
+    <Property Name="ID_INVENTARIO" Type="int" Nullable="false" />
+    <Property Name="ID_TORRE" Type="int" Nullable="false" />
+    <Property Name="ID_USUARIO" Type="int" Nullable="false" />
+    <Property Name="DT_HR_INICIO" Type="datetime" />
+    <Property Name="DT_HR_FINAL" Type="datetime" />
+  </EntityType>
+  <EntityType Name="TB_USUARIO">
+    <Key>
+      <PropertyRef Name="ID_USUARIO" />
+    </Key>
+    <Property Name="ID_USUARIO" Type="int" Nullable="false" />
+    <Property Name="NM_USUARIO" Type="varchar" MaxLength="50" />
+    <Property Name="DS_LOGIN" Type="varchar" MaxLength="50" />
+    <Property Name="DS_SENHA" Type="varchar" MaxLength="50" />
+    <Property Name="FL_ADMIN" Type="varchar" MaxLength="1" />
+    <Property Name="FL_INVENTARIO" Type="varchar" MaxLength="1" />
+    <Property Name="ID_DEPOSITO" Type="int" />
+    <Property Name="ID_TORRE" Type="int" />
+  </EntityType>
+  <Association Name="FK_TB_CAIXA_2">
+    <End Role="TB_PREC_REC_ITEM" Type="Self.TB_PREC_REC_ITEM" Multiplicity="0..1" />
+    <End Role="TB_CAIXA" Type="Self.TB_CAIXA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TB_PREC_REC_ITEM">
+        <PropertyRef Name="ID_PRE_REC_ITEM" />
+      </Principal>
+      <Dependent Role="TB_CAIXA">
+        <PropertyRef Name="ID_PRE_REC_ITEM" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TB_INVENTARIO_DESMEMB_1">
+    <End Role="TB_INVENTARIO" Type="Self.TB_INVENTARIO" Multiplicity="0..1" />
+    <End Role="TB_INVENTARIO_DESMEMB" Type="Self.TB_INVENTARIO_DESMEMB" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TB_INVENTARIO">
+        <PropertyRef Name="ID_INVENTARIO" />
+      </Principal>
+      <Dependent Role="TB_INVENTARIO_DESMEMB">
+        <PropertyRef Name="ID_INVENTARIO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TB_INVENTARIO_DESMEMB_2">
+    <End Role="TB_CAIXA" Type="Self.TB_CAIXA" Multiplicity="0..1" />
+    <End Role="TB_INVENTARIO_DESMEMB" Type="Self.TB_INVENTARIO_DESMEMB" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TB_CAIXA">
+        <PropertyRef Name="ID_CAIXA" />
+      </Principal>
+      <Dependent Role="TB_INVENTARIO_DESMEMB">
+        <PropertyRef Name="ID_CAIXA_ORIGINAL" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TB_INVENTARIO_DESMEMB_3">
+    <End Role="TB_CAIXA" Type="Self.TB_CAIXA" Multiplicity="0..1" />
+    <End Role="TB_INVENTARIO_DESMEMB" Type="Self.TB_INVENTARIO_DESMEMB" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TB_CAIXA">
+        <PropertyRef Name="ID_CAIXA" />
+      </Principal>
+      <Dependent Role="TB_INVENTARIO_DESMEMB">
+        <PropertyRef Name="ID_CAIXA_DESTINO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TB_ITENS_INVENTARIO_1">
+    <End Role="TB_INVENTARIO" Type="Self.TB_INVENTARIO" Multiplicity="0..1" />
+    <End Role="TB_ITENS_INVENTARIO" Type="Self.TB_ITENS_INVENTARIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TB_INVENTARIO">
+        <PropertyRef Name="ID_INVENTARIO" />
+      </Principal>
+      <Dependent Role="TB_ITENS_INVENTARIO">
+        <PropertyRef Name="ID_INVENTARIO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TB_ITENS_INVENTARIO_4">
+    <End Role="TB_CAIXA" Type="Self.TB_CAIXA" Multiplicity="0..1" />
+    <End Role="TB_ITENS_INVENTARIO" Type="Self.TB_ITENS_INVENTARIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TB_CAIXA">
+        <PropertyRef Name="ID_CAIXA" />
+      </Principal>
+      <Dependent Role="TB_ITENS_INVENTARIO">
+        <PropertyRef Name="ID_CAIXA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TB_ITENS_INVENTARIO_5">
+    <End Role="TB_STATUS_ITEM_INVENTARIO" Type="Self.TB_STATUS_ITEM_INVENTARIO" Multiplicity="0..1" />
+    <End Role="TB_ITENS_INVENTARIO" Type="Self.TB_ITENS_INVENTARIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TB_STATUS_ITEM_INVENTARIO">
+        <PropertyRef Name="ID_STATUS_ITEM_INVENTARIO" />
+      </Principal>
+      <Dependent Role="TB_ITENS_INVENTARIO">
+        <PropertyRef Name="ID_STATUS_ITEM_INVENTARIO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TB_ITENS_INVENTARIO_6">
+    <End Role="TB_TORRE_USR_INVENTARIO" Type="Self.TB_TORRE_USR_INVENTARIO" Multiplicity="0..1" />
+    <End Role="TB_ITENS_INVENTARIO" Type="Self.TB_ITENS_INVENTARIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TB_TORRE_USR_INVENTARIO">
+        <PropertyRef Name="ID_USR_TORRE_INVENTARIO" />
+      </Principal>
+      <Dependent Role="TB_ITENS_INVENTARIO">
+        <PropertyRef Name="ID_USR_TORRE_P_CONTAGEM" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TB_ITENS_INVENTARIO_7">
+    <End Role="TB_TORRE_USR_INVENTARIO" Type="Self.TB_TORRE_USR_INVENTARIO" Multiplicity="0..1" />
+    <End Role="TB_ITENS_INVENTARIO" Type="Self.TB_ITENS_INVENTARIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TB_TORRE_USR_INVENTARIO">
+        <PropertyRef Name="ID_USR_TORRE_INVENTARIO" />
+      </Principal>
+      <Dependent Role="TB_ITENS_INVENTARIO">
+        <PropertyRef Name="ID_USR_TORRE_S_CONTAGEM" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TB_ITENS_INVENTARIO_8">
+    <End Role="TB_TORRE_USR_INVENTARIO" Type="Self.TB_TORRE_USR_INVENTARIO" Multiplicity="0..1" />
+    <End Role="TB_ITENS_INVENTARIO" Type="Self.TB_ITENS_INVENTARIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TB_TORRE_USR_INVENTARIO">
+        <PropertyRef Name="ID_USR_TORRE_INVENTARIO" />
+      </Principal>
+      <Dependent Role="TB_ITENS_INVENTARIO">
+        <PropertyRef Name="ID_USR_TORRE_T_CONTAGEM" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TB_PREC_REC_ITEM_2">
+    <End Role="ESCADPRO" Type="Self.ESCADPRO" Multiplicity="0..1" />
+    <End Role="TB_PREC_REC_ITEM" Type="Self.TB_PREC_REC_ITEM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ESCADPRO">
+        <PropertyRef Name="CODIGO" />
+      </Principal>
+      <Dependent Role="TB_PREC_REC_ITEM">
+        <PropertyRef Name="ID_ITEM_YEP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TB_TORRE_USR_INVENTARIO_1">
+    <End Role="TB_INVENTARIO" Type="Self.TB_INVENTARIO" Multiplicity="1" />
+    <End Role="TB_TORRE_USR_INVENTARIO" Type="Self.TB_TORRE_USR_INVENTARIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TB_INVENTARIO">
+        <PropertyRef Name="ID_INVENTARIO" />
+      </Principal>
+      <Dependent Role="TB_TORRE_USR_INVENTARIO">
+        <PropertyRef Name="ID_INVENTARIO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TB_TORRE_USR_INVENTARIO_2">
+    <End Role="TB_TORRE_INVENTARIO" Type="Self.TB_TORRE_INVENTARIO" Multiplicity="1" />
+    <End Role="TB_TORRE_USR_INVENTARIO" Type="Self.TB_TORRE_USR_INVENTARIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TB_TORRE_INVENTARIO">
+        <PropertyRef Name="ID_TORRE_INVENTARIO" />
+      </Principal>
+      <Dependent Role="TB_TORRE_USR_INVENTARIO">
+        <PropertyRef Name="ID_TORRE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="YepLogModelStoreContainer">
+    <EntitySet Name="ESCADPRO" EntityType="Self.ESCADPRO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_CAIXA" EntityType="Self.TB_CAIXA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_INVENTARIO" EntityType="Self.TB_INVENTARIO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_INVENTARIO_DESMEMB" EntityType="Self.TB_INVENTARIO_DESMEMB" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_INVENTARIO_PAUSA" EntityType="Self.TB_INVENTARIO_PAUSA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_ITENS_INVENTARIO" EntityType="Self.TB_ITENS_INVENTARIO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_PREC_REC_ITEM" EntityType="Self.TB_PREC_REC_ITEM" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_STATUS_ITEM_INVENTARIO" EntityType="Self.TB_STATUS_ITEM_INVENTARIO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_TORRE_INVENTARIO" EntityType="Self.TB_TORRE_INVENTARIO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_TORRE_USR_INVENTARIO" EntityType="Self.TB_TORRE_USR_INVENTARIO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_USUARIO" EntityType="Self.TB_USUARIO" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_TB_CAIXA_2" Association="Self.FK_TB_CAIXA_2">
+      <End Role="TB_PREC_REC_ITEM" EntitySet="TB_PREC_REC_ITEM" />
+      <End Role="TB_CAIXA" EntitySet="TB_CAIXA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TB_INVENTARIO_DESMEMB_1" Association="Self.FK_TB_INVENTARIO_DESMEMB_1">
+      <End Role="TB_INVENTARIO" EntitySet="TB_INVENTARIO" />
+      <End Role="TB_INVENTARIO_DESMEMB" EntitySet="TB_INVENTARIO_DESMEMB" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TB_INVENTARIO_DESMEMB_2" Association="Self.FK_TB_INVENTARIO_DESMEMB_2">
+      <End Role="TB_CAIXA" EntitySet="TB_CAIXA" />
+      <End Role="TB_INVENTARIO_DESMEMB" EntitySet="TB_INVENTARIO_DESMEMB" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TB_INVENTARIO_DESMEMB_3" Association="Self.FK_TB_INVENTARIO_DESMEMB_3">
+      <End Role="TB_CAIXA" EntitySet="TB_CAIXA" />
+      <End Role="TB_INVENTARIO_DESMEMB" EntitySet="TB_INVENTARIO_DESMEMB" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TB_ITENS_INVENTARIO_1" Association="Self.FK_TB_ITENS_INVENTARIO_1">
+      <End Role="TB_INVENTARIO" EntitySet="TB_INVENTARIO" />
+      <End Role="TB_ITENS_INVENTARIO" EntitySet="TB_ITENS_INVENTARIO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TB_ITENS_INVENTARIO_4" Association="Self.FK_TB_ITENS_INVENTARIO_4">
+      <End Role="TB_CAIXA" EntitySet="TB_CAIXA" />
+      <End Role="TB_ITENS_INVENTARIO" EntitySet="TB_ITENS_INVENTARIO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TB_ITENS_INVENTARIO_5" Association="Self.FK_TB_ITENS_INVENTARIO_5">
+      <End Role="TB_STATUS_ITEM_INVENTARIO" EntitySet="TB_STATUS_ITEM_INVENTARIO" />
+      <End Role="TB_ITENS_INVENTARIO" EntitySet="TB_ITENS_INVENTARIO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TB_ITENS_INVENTARIO_6" Association="Self.FK_TB_ITENS_INVENTARIO_6">
+      <End Role="TB_TORRE_USR_INVENTARIO" EntitySet="TB_TORRE_USR_INVENTARIO" />
+      <End Role="TB_ITENS_INVENTARIO" EntitySet="TB_ITENS_INVENTARIO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TB_ITENS_INVENTARIO_7" Association="Self.FK_TB_ITENS_INVENTARIO_7">
+      <End Role="TB_TORRE_USR_INVENTARIO" EntitySet="TB_TORRE_USR_INVENTARIO" />
+      <End Role="TB_ITENS_INVENTARIO" EntitySet="TB_ITENS_INVENTARIO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TB_ITENS_INVENTARIO_8" Association="Self.FK_TB_ITENS_INVENTARIO_8">
+      <End Role="TB_TORRE_USR_INVENTARIO" EntitySet="TB_TORRE_USR_INVENTARIO" />
+      <End Role="TB_ITENS_INVENTARIO" EntitySet="TB_ITENS_INVENTARIO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TB_PREC_REC_ITEM_2" Association="Self.FK_TB_PREC_REC_ITEM_2">
+      <End Role="ESCADPRO" EntitySet="ESCADPRO" />
+      <End Role="TB_PREC_REC_ITEM" EntitySet="TB_PREC_REC_ITEM" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TB_TORRE_USR_INVENTARIO_1" Association="Self.FK_TB_TORRE_USR_INVENTARIO_1">
+      <End Role="TB_INVENTARIO" EntitySet="TB_INVENTARIO" />
+      <End Role="TB_TORRE_USR_INVENTARIO" EntitySet="TB_TORRE_USR_INVENTARIO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TB_TORRE_USR_INVENTARIO_2" Association="Self.FK_TB_TORRE_USR_INVENTARIO_2">
+      <End Role="TB_TORRE_INVENTARIO" EntitySet="TB_TORRE_INVENTARIO" />
+      <End Role="TB_TORRE_USR_INVENTARIO" EntitySet="TB_TORRE_USR_INVENTARIO" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

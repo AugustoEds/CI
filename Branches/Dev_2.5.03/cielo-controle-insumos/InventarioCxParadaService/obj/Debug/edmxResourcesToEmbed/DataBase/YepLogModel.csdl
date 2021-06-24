@@ -1,0 +1,475 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="YepLogModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="TB_INVENTARIO">
+    <Key>
+      <PropertyRef Name="ID_INVENTARIO" />
+    </Key>
+    <Property Name="ID_INVENTARIO" Type="Int32" Nullable="false" />
+    <Property Name="DT_INVENTARIO" Type="DateTime" />
+    <Property Name="ID_USUARIO" Type="Int32" />
+    <Property Name="ID_STATUS_INVENTARIO" Type="Int32" />
+    <Property Name="DT_INICIO" Type="DateTime" />
+    <Property Name="DT_ENCERRAMENTO" Type="DateTime" />
+    <Property Name="DS_OBSERVACAO" Type="String" MaxLength="300" FixedLength="false" />
+    <Property Name="NR_INTERVALO_CX_PARADA" Type="Int32" />
+    <Property Name="NR_TEMPO_CX_PARADA" Type="Int32" />
+    <NavigationProperty Name="TB_INVENTARIO_DESMEMB" Relationship="Self.FK_TB_INVENTARIO_DESMEMB_1" FromRole="TB_INVENTARIO" ToRole="TB_INVENTARIO_DESMEMB" />
+    <NavigationProperty Name="TB_ITENS_INVENTARIO" Relationship="Self.FK_TB_ITENS_INVENTARIO_1" FromRole="TB_INVENTARIO" ToRole="TB_ITENS_INVENTARIO" />
+    <NavigationProperty Name="TB_TORRE_USR_INVENTARIO" Relationship="YepLogModel.FK_TB_TORRE_USR_INVENTARIO_1" FromRole="TB_INVENTARIO" ToRole="TB_TORRE_USR_INVENTARIO" />
+    <Property Name="DS_EMAIL_CX_PARADA" Type="String" MaxLength="5000" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="TB_INVENTARIO_DESMEMB">
+    <Key>
+      <PropertyRef Name="ID_DESEMEMB" />
+    </Key>
+    <Property Name="ID_DESEMEMB" Type="Int32" Nullable="false" />
+    <Property Name="ID_INVENTARIO" Type="Int32" />
+    <Property Name="ID_CAIXA_ORIGINAL" Type="Int32" />
+    <Property Name="ID_CAIXA_DESTINO" Type="Int32" />
+    <NavigationProperty Name="TB_INVENTARIO" Relationship="Self.FK_TB_INVENTARIO_DESMEMB_1" FromRole="TB_INVENTARIO_DESMEMB" ToRole="TB_INVENTARIO" />
+    <NavigationProperty Name="TB_CAIXA" Relationship="YepLogModel.FK_TB_INVENTARIO_DESMEMB_2" FromRole="TB_INVENTARIO_DESMEMB" ToRole="TB_CAIXA" />
+    <NavigationProperty Name="TB_CAIXA1" Relationship="YepLogModel.FK_TB_INVENTARIO_DESMEMB_3" FromRole="TB_INVENTARIO_DESMEMB" ToRole="TB_CAIXA" />
+  </EntityType>
+  <EntityType Name="TB_INVENTARIO_PAUSA">
+    <Key>
+      <PropertyRef Name="ID_INVENTARIO_PAUSA" />
+    </Key>
+    <Property Name="ID_INVENTARIO_PAUSA" Type="Int32" Nullable="false" />
+    <Property Name="ID_INVENTARIO" Type="Int32" />
+    <Property Name="DT_INICIO" Type="DateTime" />
+    <Property Name="DT_FINAL" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="TB_ITENS_INVENTARIO">
+    <Key>
+      <PropertyRef Name="ID_ITEM_INVENTARIO" />
+    </Key>
+    <Property Name="ID_ITEM_INVENTARIO" Type="Int32" Nullable="false" />
+    <Property Name="ID_INVENTARIO" Type="Int32" />
+    <Property Name="ID_GRUPO" Type="String" MaxLength="32765" FixedLength="false" />
+    <Property Name="ID_LOCAL_ESTOQUE" Type="Int32" />
+    <Property Name="ID_CAIXA" Type="Int32" />
+    <Property Name="QT_ITENS" Type="Int32" />
+    <Property Name="ID_STATUS_ITEM_INVENTARIO" Type="Int32" />
+    <Property Name="DT_HR_P_CONTAGEM" Type="DateTime" />
+    <Property Name="ID_USR_TORRE_P_CONTAGEM" Type="Int32" />
+    <Property Name="QT_P_CONTAGEM" Type="Int32" />
+    <Property Name="DT_HR_S_CONTAGEM" Type="DateTime" />
+    <Property Name="ID_USR_TORRE_S_CONTAGEM" Type="Int32" />
+    <Property Name="QT_S_CONTAGEM" Type="Int32" />
+    <Property Name="DT_HR_T_CONTAGEM" Type="DateTime" />
+    <Property Name="ID_USR_TORRE_T_CONTAGEM" Type="Int32" />
+    <Property Name="QT_T_CONTAGEM" Type="Int32" />
+    <Property Name="ID_DEPOSITO" Type="Int32" />
+    <Property Name="ID_SUBGRUPO" Type="String" MaxLength="4" FixedLength="false" />
+    <Property Name="ID_STATUS_CAIXA" Type="Int32" />
+    <NavigationProperty Name="TB_INVENTARIO" Relationship="Self.FK_TB_ITENS_INVENTARIO_1" FromRole="TB_ITENS_INVENTARIO" ToRole="TB_INVENTARIO" />
+    <Property Name="DT_HR_P_BIPAGEM" Type="DateTime" />
+    <NavigationProperty Name="TB_CAIXA" Relationship="YepLogModel.FK_TB_ITENS_INVENTARIO_4" FromRole="TB_ITENS_INVENTARIO" ToRole="TB_CAIXA" />
+    <NavigationProperty Name="TB_TORRE_USR_INVENTARIO" Relationship="YepLogModel.FK_TB_ITENS_INVENTARIO_6" FromRole="TB_ITENS_INVENTARIO" ToRole="TB_TORRE_USR_INVENTARIO" />
+    <NavigationProperty Name="TB_TORRE_USR_INVENTARIO1" Relationship="YepLogModel.FK_TB_ITENS_INVENTARIO_7" FromRole="TB_ITENS_INVENTARIO" ToRole="TB_TORRE_USR_INVENTARIO" />
+    <NavigationProperty Name="TB_TORRE_USR_INVENTARIO2" Relationship="YepLogModel.FK_TB_ITENS_INVENTARIO_8" FromRole="TB_ITENS_INVENTARIO" ToRole="TB_TORRE_USR_INVENTARIO" />
+    <NavigationProperty Name="TB_STATUS_ITEM_INVENTARIO" Relationship="YepLogModel.FK_TB_ITENS_INVENTARIO_5" FromRole="TB_ITENS_INVENTARIO" ToRole="TB_STATUS_ITEM_INVENTARIO" />
+  </EntityType>
+  <Association Name="FK_TB_INVENTARIO_DESMEMB_1">
+    <End Role="TB_INVENTARIO" Type="Self.TB_INVENTARIO" Multiplicity="0..1" />
+    <End Role="TB_INVENTARIO_DESMEMB" Type="Self.TB_INVENTARIO_DESMEMB" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TB_INVENTARIO">
+        <PropertyRef Name="ID_INVENTARIO" />
+      </Principal>
+      <Dependent Role="TB_INVENTARIO_DESMEMB">
+        <PropertyRef Name="ID_INVENTARIO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TB_ITENS_INVENTARIO_1">
+    <End Role="TB_INVENTARIO" Type="Self.TB_INVENTARIO" Multiplicity="0..1" />
+    <End Role="TB_ITENS_INVENTARIO" Type="Self.TB_ITENS_INVENTARIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TB_INVENTARIO">
+        <PropertyRef Name="ID_INVENTARIO" />
+      </Principal>
+      <Dependent Role="TB_ITENS_INVENTARIO">
+        <PropertyRef Name="ID_INVENTARIO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="YepLogEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="TB_INVENTARIO" EntityType="Self.TB_INVENTARIO" />
+    <EntitySet Name="TB_INVENTARIO_DESMEMB" EntityType="Self.TB_INVENTARIO_DESMEMB" />
+    <EntitySet Name="TB_INVENTARIO_PAUSA" EntityType="Self.TB_INVENTARIO_PAUSA" />
+    <EntitySet Name="TB_ITENS_INVENTARIO" EntityType="Self.TB_ITENS_INVENTARIO" />
+    <AssociationSet Name="FK_TB_INVENTARIO_DESMEMB_1" Association="Self.FK_TB_INVENTARIO_DESMEMB_1">
+      <End Role="TB_INVENTARIO" EntitySet="TB_INVENTARIO" />
+      <End Role="TB_INVENTARIO_DESMEMB" EntitySet="TB_INVENTARIO_DESMEMB" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TB_ITENS_INVENTARIO_1" Association="Self.FK_TB_ITENS_INVENTARIO_1">
+      <End Role="TB_INVENTARIO" EntitySet="TB_INVENTARIO" />
+      <End Role="TB_ITENS_INVENTARIO" EntitySet="TB_ITENS_INVENTARIO" />
+    </AssociationSet>
+    <EntitySet Name="TB_CAIXA" EntityType="YepLogModel.TB_CAIXA" />
+    <AssociationSet Name="FK_TB_INVENTARIO_DESMEMB_2" Association="YepLogModel.FK_TB_INVENTARIO_DESMEMB_2">
+      <End Role="TB_CAIXA" EntitySet="TB_CAIXA" />
+      <End Role="TB_INVENTARIO_DESMEMB" EntitySet="TB_INVENTARIO_DESMEMB" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TB_INVENTARIO_DESMEMB_3" Association="YepLogModel.FK_TB_INVENTARIO_DESMEMB_3">
+      <End Role="TB_CAIXA" EntitySet="TB_CAIXA" />
+      <End Role="TB_INVENTARIO_DESMEMB" EntitySet="TB_INVENTARIO_DESMEMB" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TB_ITENS_INVENTARIO_4" Association="YepLogModel.FK_TB_ITENS_INVENTARIO_4">
+      <End Role="TB_CAIXA" EntitySet="TB_CAIXA" />
+      <End Role="TB_ITENS_INVENTARIO" EntitySet="TB_ITENS_INVENTARIO" />
+    </AssociationSet>
+    <EntitySet Name="ESCADPRO" EntityType="YepLogModel.ESCADPRO" />
+    <EntitySet Name="TB_PREC_REC_ITEM" EntityType="YepLogModel.TB_PREC_REC_ITEM" />
+    <EntitySet Name="TB_USUARIO" EntityType="YepLogModel.TB_USUARIO" />
+    <AssociationSet Name="FK_TB_PREC_REC_ITEM_2" Association="YepLogModel.FK_TB_PREC_REC_ITEM_2">
+      <End Role="ESCADPRO" EntitySet="ESCADPRO" />
+      <End Role="TB_PREC_REC_ITEM" EntitySet="TB_PREC_REC_ITEM" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TB_CAIXA_2" Association="YepLogModel.FK_TB_CAIXA_2">
+      <End Role="TB_PREC_REC_ITEM" EntitySet="TB_PREC_REC_ITEM" />
+      <End Role="TB_CAIXA" EntitySet="TB_CAIXA" />
+    </AssociationSet>
+    <EntitySet Name="TB_TORRE_INVENTARIO" EntityType="YepLogModel.TB_TORRE_INVENTARIO" />
+    <EntitySet Name="TB_TORRE_USR_INVENTARIO" EntityType="YepLogModel.TB_TORRE_USR_INVENTARIO" />
+    <AssociationSet Name="FK_TB_TORRE_USR_INVENTARIO_1" Association="YepLogModel.FK_TB_TORRE_USR_INVENTARIO_1">
+      <End Role="TB_INVENTARIO" EntitySet="TB_INVENTARIO" />
+      <End Role="TB_TORRE_USR_INVENTARIO" EntitySet="TB_TORRE_USR_INVENTARIO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TB_ITENS_INVENTARIO_6" Association="YepLogModel.FK_TB_ITENS_INVENTARIO_6">
+      <End Role="TB_TORRE_USR_INVENTARIO" EntitySet="TB_TORRE_USR_INVENTARIO" />
+      <End Role="TB_ITENS_INVENTARIO" EntitySet="TB_ITENS_INVENTARIO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TB_ITENS_INVENTARIO_7" Association="YepLogModel.FK_TB_ITENS_INVENTARIO_7">
+      <End Role="TB_TORRE_USR_INVENTARIO" EntitySet="TB_TORRE_USR_INVENTARIO" />
+      <End Role="TB_ITENS_INVENTARIO" EntitySet="TB_ITENS_INVENTARIO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TB_ITENS_INVENTARIO_8" Association="YepLogModel.FK_TB_ITENS_INVENTARIO_8">
+      <End Role="TB_TORRE_USR_INVENTARIO" EntitySet="TB_TORRE_USR_INVENTARIO" />
+      <End Role="TB_ITENS_INVENTARIO" EntitySet="TB_ITENS_INVENTARIO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TB_TORRE_USR_INVENTARIO_2" Association="YepLogModel.FK_TB_TORRE_USR_INVENTARIO_2">
+      <End Role="TB_TORRE_INVENTARIO" EntitySet="TB_TORRE_INVENTARIO" />
+      <End Role="TB_TORRE_USR_INVENTARIO" EntitySet="TB_TORRE_USR_INVENTARIO" />
+    </AssociationSet>
+    <EntitySet Name="TB_STATUS_ITEM_INVENTARIO" EntityType="YepLogModel.TB_STATUS_ITEM_INVENTARIO" />
+    <AssociationSet Name="FK_TB_ITENS_INVENTARIO_5" Association="YepLogModel.FK_TB_ITENS_INVENTARIO_5">
+      <End Role="TB_STATUS_ITEM_INVENTARIO" EntitySet="TB_STATUS_ITEM_INVENTARIO" />
+      <End Role="TB_ITENS_INVENTARIO" EntitySet="TB_ITENS_INVENTARIO" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="TB_CAIXA">
+    <Key>
+      <PropertyRef Name="ID_CAIXA" />
+    </Key>
+    <Property Name="ID_CAIXA" Type="Int32" Nullable="false" />
+    <Property Name="ID_FASE" Type="Int32" />
+    <Property Name="ID_PRE_REC_ITEM" Type="Int32" />
+    <Property Name="ID_STATUS_CAIXA" Type="Int32" />
+    <Property Name="QT_ITENS" Type="Int32" />
+    <Property Name="NR_ETIQUETA" Type="String" MaxLength="40" FixedLength="false" />
+    <Property Name="QT_CONT_CQ" Type="Int32" />
+    <Property Name="FL_IMPRESSO" Type="String" MaxLength="1" FixedLength="false" />
+    <Property Name="QT_CONT_REC" Type="Int32" />
+    <Property Name="ID_MOTIVO_RECUSA" Type="Int32" />
+    <Property Name="ID_LOCACAO_LOCAL" Type="Int32" />
+    <NavigationProperty Name="TB_INVENTARIO_DESMEMB" Relationship="YepLogModel.FK_TB_INVENTARIO_DESMEMB_2" FromRole="TB_CAIXA" ToRole="TB_INVENTARIO_DESMEMB" />
+    <NavigationProperty Name="TB_INVENTARIO_DESMEMB1" Relationship="YepLogModel.FK_TB_INVENTARIO_DESMEMB_3" FromRole="TB_CAIXA" ToRole="TB_INVENTARIO_DESMEMB" />
+    <NavigationProperty Name="TB_ITENS_INVENTARIO" Relationship="YepLogModel.FK_TB_ITENS_INVENTARIO_4" FromRole="TB_CAIXA" ToRole="TB_ITENS_INVENTARIO" />
+    <NavigationProperty Name="TB_PREC_REC_ITEM" Relationship="YepLogModel.FK_TB_CAIXA_2" FromRole="TB_CAIXA" ToRole="TB_PREC_REC_ITEM" />
+  </EntityType>
+  <Association Name="FK_TB_INVENTARIO_DESMEMB_2">
+    <End Type="YepLogModel.TB_CAIXA" Role="TB_CAIXA" Multiplicity="0..1" />
+    <End Type="YepLogModel.TB_INVENTARIO_DESMEMB" Role="TB_INVENTARIO_DESMEMB" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TB_CAIXA">
+        <PropertyRef Name="ID_CAIXA" />
+      </Principal>
+      <Dependent Role="TB_INVENTARIO_DESMEMB">
+        <PropertyRef Name="ID_CAIXA_ORIGINAL" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TB_INVENTARIO_DESMEMB_3">
+    <End Type="YepLogModel.TB_CAIXA" Role="TB_CAIXA" Multiplicity="0..1" />
+    <End Type="YepLogModel.TB_INVENTARIO_DESMEMB" Role="TB_INVENTARIO_DESMEMB" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TB_CAIXA">
+        <PropertyRef Name="ID_CAIXA" />
+      </Principal>
+      <Dependent Role="TB_INVENTARIO_DESMEMB">
+        <PropertyRef Name="ID_CAIXA_DESTINO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TB_ITENS_INVENTARIO_4">
+    <End Type="YepLogModel.TB_CAIXA" Role="TB_CAIXA" Multiplicity="0..1" />
+    <End Type="YepLogModel.TB_ITENS_INVENTARIO" Role="TB_ITENS_INVENTARIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TB_CAIXA">
+        <PropertyRef Name="ID_CAIXA" />
+      </Principal>
+      <Dependent Role="TB_ITENS_INVENTARIO">
+        <PropertyRef Name="ID_CAIXA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="ESCADPRO">
+    <Key>
+      <PropertyRef Name="CODIGO" />
+    </Key>
+    <Property Name="CODIGO" Type="String" Nullable="false" MaxLength="15" FixedLength="false" />
+    <Property Name="DESCRICAO" Type="String" MaxLength="100" FixedLength="false" />
+    <Property Name="NUM_DESENHO" Type="String" MaxLength="40" FixedLength="false" />
+    <Property Name="DATA_DESENHO" Type="DateTime" />
+    <Property Name="GRUPO" Type="String" MaxLength="4" FixedLength="false" />
+    <Property Name="SUB_GRUPO" Type="String" MaxLength="4" FixedLength="false" />
+    <Property Name="TIPO" Type="Int32" />
+    <Property Name="COD_ESTRUTURA" Type="String" MaxLength="15" FixedLength="false" />
+    <Property Name="UNIDADE" Type="String" MaxLength="3" FixedLength="false" />
+    <Property Name="PESO_LIQUIDO" Type="Double" />
+    <Property Name="SITUACAO" Type="String" MaxLength="10" FixedLength="false" />
+    <Property Name="ESTOQUE_MAXIMO" Type="Double" />
+    <Property Name="ESTOQUE_MINIMO" Type="Double" />
+    <Property Name="CLASSIFICACAO_FISCAL" Type="String" MaxLength="12" FixedLength="false" />
+    <Property Name="ALIQUOTA_IPI" Type="Double" />
+    <Property Name="FLAG_RED_ICMS" Type="String" MaxLength="3" FixedLength="false" />
+    <Property Name="DATA_CAD" Type="DateTime" />
+    <Property Name="DATA_ALT" Type="DateTime" />
+    <Property Name="ULT_MOV" Type="DateTime" />
+    <Property Name="FLAG_VALORIZA" Type="String" MaxLength="1" FixedLength="false" />
+    <Property Name="SITUACAO_INV" Type="String" MaxLength="11" FixedLength="false" />
+    <Property Name="FLAG_CRED_ICMS" Type="String" MaxLength="3" FixedLength="false" />
+    <Property Name="FLAG_CRED_IPI" Type="String" MaxLength="3" FixedLength="false" />
+    <Property Name="ORIGEM" Type="Int32" />
+    <Property Name="COD_ALTERNATIVO" Type="String" MaxLength="15" FixedLength="false" />
+    <Property Name="PRECO_PECA" Type="Double" />
+    <Property Name="PRECO_VENDA" Type="Double" />
+    <Property Name="MARGEM_LUCRO" Type="Double" />
+    <Property Name="CUSTO_UNITARIO" Type="Double" />
+    <Property Name="VERSAO_ATUAL" Type="Int32" />
+    <Property Name="UTILIZA_LOTE" Type="String" MaxLength="3" FixedLength="false" />
+    <Property Name="SOL_LOTE_FORN" Type="String" MaxLength="3" FixedLength="false" />
+    <Property Name="METODO_LOTE" Type="String" MaxLength="10" FixedLength="false" />
+    <Property Name="CHAVE_METODO" Type="String" MaxLength="20" FixedLength="false" />
+    <Property Name="DEF_LOTE_ENT" Type="String" MaxLength="12" FixedLength="false" />
+    <Property Name="NUM_LOTE_ENT" Type="Int32" />
+    <Property Name="DEF_LOTE_INV" Type="String" MaxLength="12" FixedLength="false" />
+    <Property Name="NUM_LOTE_INV" Type="Int32" />
+    <Property Name="SITUACAO_LOTE" Type="String" MaxLength="15" FixedLength="false" />
+    <Property Name="QTDE_CAIXA" Type="Double" />
+    <Property Name="QTDE_PALLET" Type="Double" />
+    <Property Name="REDUZIDO" Type="String" MaxLength="6" FixedLength="false" />
+    <Property Name="DESCRICAO_FAT" Type="String" MaxLength="200" FixedLength="false" />
+    <Property Name="CLASSIFICACAO_ITEM" Type="String" MaxLength="15" FixedLength="false" />
+    <Property Name="GRAMATURA" Type="Double" />
+    <Property Name="TIPO_ONDA" Type="String" MaxLength="2" FixedLength="false" />
+    <Property Name="TEMPO_PREP" Type="Double" />
+    <Property Name="TEMPO_OPER" Type="Double" />
+    <Property Name="TEMPO_MAQ" Type="Double" />
+    <Property Name="TEMPO_FABR" Type="Double" />
+    <Property Name="QTDE_BASE" Type="Double" />
+    <Property Name="DIAGONAL_MENOR" Type="Double" />
+    <Property Name="DIAGONAL_MAIOR" Type="Double" />
+    <Property Name="ESPESSURA" Type="Double" />
+    <Property Name="CORDAO" Type="Double" />
+    <Property Name="FLAG_CRED_PIS" Type="String" MaxLength="3" FixedLength="false" />
+    <Property Name="FLAG_CRED_COFINS" Type="String" MaxLength="3" FixedLength="false" />
+    <Property Name="TOLER_MENOR" Type="Double" />
+    <Property Name="TOLER_MAIOR" Type="Double" />
+    <Property Name="SENHA_CAD" Type="String" MaxLength="10" FixedLength="false" />
+    <Property Name="SENHA_ALT" Type="String" MaxLength="10" FixedLength="false" />
+    <Property Name="ANALISE_FIS_QUI" Type="Int32" />
+    <Property Name="ANALISE_MICROBI" Type="Int32" />
+    <Property Name="CODIGO_EAN_UCC" Type="String" MaxLength="14" FixedLength="false" />
+    <Property Name="QTDE_FRACIONADA" Type="Double" />
+    <Property Name="FLAG_DESTAQUE_IPI" Type="String" MaxLength="3" FixedLength="false" />
+    <Property Name="PADRAO_LOTE" Type="String" MaxLength="20" FixedLength="false" />
+    <Property Name="FLAG_VERSAO" Type="String" MaxLength="3" FixedLength="false" />
+    <Property Name="FLAG_FICHA" Type="String" MaxLength="3" FixedLength="false" />
+    <Property Name="EMBALAGEM_PADRAO" Type="Int32" />
+    <Property Name="EXCECAO_NCM" Type="String" MaxLength="4" FixedLength="false" />
+    <Property Name="GENERO" Type="String" MaxLength="4" FixedLength="false" />
+    <Property Name="COD_SERVICO" Type="String" MaxLength="4" FixedLength="false" />
+    <Property Name="ALIQUOTA_ISS" Type="Double" />
+    <Property Name="ULT_RG_VISANET_RFI" Type="Int32" />
+    <Property Name="ULT_RG_VISANET_LEG" Type="Int32" />
+    <Property Name="ULT_VISANET_PROV" Type="Int32" />
+    <Property Name="FABRICANTE" Type="String" MaxLength="10" FixedLength="false" />
+    <Property Name="SUCATA" Type="String" MaxLength="15" FixedLength="false" />
+    <Property Name="NPA" Type="String" MaxLength="15" FixedLength="false" />
+    <Property Name="RPA" Type="String" MaxLength="15" FixedLength="false" />
+    <Property Name="RPT_TRIAGEM" Type="String" MaxLength="15" FixedLength="false" />
+    <Property Name="RPT_REPARO" Type="String" MaxLength="15" FixedLength="false" />
+    <Property Name="TECN_DESCONTIN" Type="String" MaxLength="15" FixedLength="false" />
+    <Property Name="CAPACIDADE_VOLUME" Type="Int32" />
+    <Property Name="CODIGO_SAP" Type="String" MaxLength="15" FixedLength="false" />
+    <Property Name="RPT_GARANTIA" Type="String" MaxLength="15" FixedLength="false" />
+    <NavigationProperty Name="TB_PREC_REC_ITEM" Relationship="YepLogModel.FK_TB_PREC_REC_ITEM_2" FromRole="ESCADPRO" ToRole="TB_PREC_REC_ITEM" />
+  </EntityType>
+  <EntityType Name="TB_PREC_REC_ITEM">
+    <Key>
+      <PropertyRef Name="ID_PRE_REC_ITEM" />
+    </Key>
+    <Property Name="ID_PRE_REC_ITEM" Type="Int32" Nullable="false" />
+    <Property Name="ID_PRE_REC" Type="Int32" />
+    <Property Name="QT_VOLUME" Type="Decimal" Precision="14" Scale="2" />
+    <Property Name="QT_UNIDADE_VOLUME" Type="Decimal" Precision="14" Scale="2" />
+    <Property Name="DT_INCLUSAO" Type="DateTime" />
+    <Property Name="ID_USER_INC" Type="Int32" />
+    <Property Name="ID_ULT_ALTERACAO" Type="DateTime" />
+    <Property Name="ID_USER_ULT_ALT" Type="Int32" />
+    <Property Name="ID_ITEM_YEP" Type="String" MaxLength="15" FixedLength="false" />
+    <Property Name="ID_INSPEC" Type="Int32" />
+    <Property Name="QT_REJEICAO" Type="Int32" />
+    <Property Name="FL_TESTE_FUNC_RAPIDO" Type="String" MaxLength="1" FixedLength="false" />
+    <Property Name="FL_TESTE_EXAME_VISUAL" Type="String" MaxLength="1" FixedLength="false" />
+    <Property Name="DS_OBSERVACAO" Type="String" MaxLength="3000" FixedLength="false" />
+    <NavigationProperty Name="ESCADPRO" Relationship="YepLogModel.FK_TB_PREC_REC_ITEM_2" FromRole="TB_PREC_REC_ITEM" ToRole="ESCADPRO" />
+    <NavigationProperty Name="TB_CAIXA" Relationship="YepLogModel.FK_TB_CAIXA_2" FromRole="TB_PREC_REC_ITEM" ToRole="TB_CAIXA" />
+  </EntityType>
+  <EntityType Name="TB_USUARIO">
+    <Key>
+      <PropertyRef Name="ID_USUARIO" />
+    </Key>
+    <Property Name="ID_USUARIO" Type="Int32" Nullable="false" />
+    <Property Name="NM_USUARIO" Type="String" MaxLength="50" FixedLength="false" />
+    <Property Name="DS_LOGIN" Type="String" MaxLength="50" FixedLength="false" />
+    <Property Name="DS_SENHA" Type="String" MaxLength="50" FixedLength="false" />
+    <Property Name="FL_ADMIN" Type="String" MaxLength="1" FixedLength="false" />
+    <Property Name="FL_INVENTARIO" Type="String" MaxLength="1" FixedLength="false" />
+    <Property Name="ID_DEPOSITO" Type="Int32" />
+    <Property Name="ID_TORRE" Type="Int32" />
+  </EntityType>
+  <Association Name="FK_TB_PREC_REC_ITEM_2">
+    <End Type="YepLogModel.ESCADPRO" Role="ESCADPRO" Multiplicity="0..1" />
+    <End Type="YepLogModel.TB_PREC_REC_ITEM" Role="TB_PREC_REC_ITEM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ESCADPRO">
+        <PropertyRef Name="CODIGO" />
+      </Principal>
+      <Dependent Role="TB_PREC_REC_ITEM">
+        <PropertyRef Name="ID_ITEM_YEP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TB_CAIXA_2">
+    <End Type="YepLogModel.TB_PREC_REC_ITEM" Role="TB_PREC_REC_ITEM" Multiplicity="0..1" />
+    <End Type="YepLogModel.TB_CAIXA" Role="TB_CAIXA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TB_PREC_REC_ITEM">
+        <PropertyRef Name="ID_PRE_REC_ITEM" />
+      </Principal>
+      <Dependent Role="TB_CAIXA">
+        <PropertyRef Name="ID_PRE_REC_ITEM" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="TB_TORRE_INVENTARIO">
+    <Key>
+      <PropertyRef Name="ID_TORRE_INVENTARIO" />
+    </Key>
+    <Property Name="ID_TORRE_INVENTARIO" Type="Int32" Nullable="false" />
+    <Property Name="DS_TORRE_INVENTARIO" Type="String" MaxLength="100" FixedLength="false" />
+    <Property Name="FL_ATIVO" Type="String" MaxLength="1" FixedLength="false" />
+    <Property Name="FL_REALIZA_T_CONTAGEM" Type="String" MaxLength="1" FixedLength="false" />
+    <NavigationProperty Name="TB_TORRE_USR_INVENTARIO" Relationship="YepLogModel.FK_TB_TORRE_USR_INVENTARIO_2" FromRole="TB_TORRE_INVENTARIO" ToRole="TB_TORRE_USR_INVENTARIO" />
+  </EntityType>
+  <EntityType Name="TB_TORRE_USR_INVENTARIO">
+    <Key>
+      <PropertyRef Name="ID_USR_TORRE_INVENTARIO" />
+    </Key>
+    <Property Name="ID_USR_TORRE_INVENTARIO" Type="Int32" Nullable="false" />
+    <Property Name="ID_INVENTARIO" Type="Int32" Nullable="false" />
+    <Property Name="ID_TORRE" Type="Int32" Nullable="false" />
+    <Property Name="ID_USUARIO" Type="Int32" Nullable="false" />
+    <Property Name="DT_HR_INICIO" Type="DateTime" />
+    <Property Name="DT_HR_FINAL" Type="DateTime" />
+    <NavigationProperty Name="TB_INVENTARIO" Relationship="YepLogModel.FK_TB_TORRE_USR_INVENTARIO_1" FromRole="TB_TORRE_USR_INVENTARIO" ToRole="TB_INVENTARIO" />
+    <NavigationProperty Name="TB_ITENS_INVENTARIO" Relationship="YepLogModel.FK_TB_ITENS_INVENTARIO_6" FromRole="TB_TORRE_USR_INVENTARIO" ToRole="TB_ITENS_INVENTARIO" />
+    <NavigationProperty Name="TB_ITENS_INVENTARIO1" Relationship="YepLogModel.FK_TB_ITENS_INVENTARIO_7" FromRole="TB_TORRE_USR_INVENTARIO" ToRole="TB_ITENS_INVENTARIO" />
+    <NavigationProperty Name="TB_ITENS_INVENTARIO2" Relationship="YepLogModel.FK_TB_ITENS_INVENTARIO_8" FromRole="TB_TORRE_USR_INVENTARIO" ToRole="TB_ITENS_INVENTARIO" />
+    <NavigationProperty Name="TB_TORRE_INVENTARIO" Relationship="YepLogModel.FK_TB_TORRE_USR_INVENTARIO_2" FromRole="TB_TORRE_USR_INVENTARIO" ToRole="TB_TORRE_INVENTARIO" />
+  </EntityType>
+  <Association Name="FK_TB_TORRE_USR_INVENTARIO_1">
+    <End Type="YepLogModel.TB_INVENTARIO" Role="TB_INVENTARIO" Multiplicity="1" />
+    <End Type="YepLogModel.TB_TORRE_USR_INVENTARIO" Role="TB_TORRE_USR_INVENTARIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TB_INVENTARIO">
+        <PropertyRef Name="ID_INVENTARIO" />
+      </Principal>
+      <Dependent Role="TB_TORRE_USR_INVENTARIO">
+        <PropertyRef Name="ID_INVENTARIO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TB_ITENS_INVENTARIO_6">
+    <End Type="YepLogModel.TB_TORRE_USR_INVENTARIO" Role="TB_TORRE_USR_INVENTARIO" Multiplicity="0..1" />
+    <End Type="YepLogModel.TB_ITENS_INVENTARIO" Role="TB_ITENS_INVENTARIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TB_TORRE_USR_INVENTARIO">
+        <PropertyRef Name="ID_USR_TORRE_INVENTARIO" />
+      </Principal>
+      <Dependent Role="TB_ITENS_INVENTARIO">
+        <PropertyRef Name="ID_USR_TORRE_P_CONTAGEM" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TB_ITENS_INVENTARIO_7">
+    <End Type="YepLogModel.TB_TORRE_USR_INVENTARIO" Role="TB_TORRE_USR_INVENTARIO" Multiplicity="0..1" />
+    <End Type="YepLogModel.TB_ITENS_INVENTARIO" Role="TB_ITENS_INVENTARIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TB_TORRE_USR_INVENTARIO">
+        <PropertyRef Name="ID_USR_TORRE_INVENTARIO" />
+      </Principal>
+      <Dependent Role="TB_ITENS_INVENTARIO">
+        <PropertyRef Name="ID_USR_TORRE_S_CONTAGEM" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TB_ITENS_INVENTARIO_8">
+    <End Type="YepLogModel.TB_TORRE_USR_INVENTARIO" Role="TB_TORRE_USR_INVENTARIO" Multiplicity="0..1" />
+    <End Type="YepLogModel.TB_ITENS_INVENTARIO" Role="TB_ITENS_INVENTARIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TB_TORRE_USR_INVENTARIO">
+        <PropertyRef Name="ID_USR_TORRE_INVENTARIO" />
+      </Principal>
+      <Dependent Role="TB_ITENS_INVENTARIO">
+        <PropertyRef Name="ID_USR_TORRE_T_CONTAGEM" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TB_TORRE_USR_INVENTARIO_2">
+    <End Type="YepLogModel.TB_TORRE_INVENTARIO" Role="TB_TORRE_INVENTARIO" Multiplicity="1" />
+    <End Type="YepLogModel.TB_TORRE_USR_INVENTARIO" Role="TB_TORRE_USR_INVENTARIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TB_TORRE_INVENTARIO">
+        <PropertyRef Name="ID_TORRE_INVENTARIO" />
+      </Principal>
+      <Dependent Role="TB_TORRE_USR_INVENTARIO">
+        <PropertyRef Name="ID_TORRE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="TB_STATUS_ITEM_INVENTARIO">
+    <Key>
+      <PropertyRef Name="ID_STATUS_ITEM_INVENTARIO" />
+    </Key>
+    <Property Name="ID_STATUS_ITEM_INVENTARIO" Type="Int32" Nullable="false" />
+    <Property Name="DS_STATUS_ITEM_INVENTARIO" Type="String" MaxLength="100" FixedLength="false" />
+    <NavigationProperty Name="TB_ITENS_INVENTARIO" Relationship="YepLogModel.FK_TB_ITENS_INVENTARIO_5" FromRole="TB_STATUS_ITEM_INVENTARIO" ToRole="TB_ITENS_INVENTARIO" />
+  </EntityType>
+  <Association Name="FK_TB_ITENS_INVENTARIO_5">
+    <End Type="YepLogModel.TB_STATUS_ITEM_INVENTARIO" Role="TB_STATUS_ITEM_INVENTARIO" Multiplicity="0..1" />
+    <End Type="YepLogModel.TB_ITENS_INVENTARIO" Role="TB_ITENS_INVENTARIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TB_STATUS_ITEM_INVENTARIO">
+        <PropertyRef Name="ID_STATUS_ITEM_INVENTARIO" />
+      </Principal>
+      <Dependent Role="TB_ITENS_INVENTARIO">
+        <PropertyRef Name="ID_STATUS_ITEM_INVENTARIO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

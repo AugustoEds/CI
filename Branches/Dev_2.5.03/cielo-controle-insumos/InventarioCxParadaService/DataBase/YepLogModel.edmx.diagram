@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="fa3df67c5acc4ca89d1d6a2d142c196e" Name="Diagram1" ZoomLevel="94">
+        <EntityTypeShape EntityType="YepLogModel.TB_INVENTARIO" Width="1.5" PointX="2.75" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="YepLogModel.TB_INVENTARIO_DESMEMB" Width="1.5" PointX="3" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="YepLogModel.TB_INVENTARIO_PAUSA" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="YepLogModel.TB_ITENS_INVENTARIO" Width="1.5" PointX="4.125" PointY="7.25" IsExpanded="true" />
+        <AssociationConnector Association="YepLogModel.FK_TB_INVENTARIO_DESMEMB_1" ManuallyRouted="false" />
+        <AssociationConnector Association="YepLogModel.FK_TB_ITENS_INVENTARIO_1" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="YepLogModel.TB_CAIXA" Width="1.5" PointX="0.5" PointY="5.125" />
+        <AssociationConnector Association="YepLogModel.FK_TB_INVENTARIO_DESMEMB_2" />
+        <AssociationConnector Association="YepLogModel.FK_TB_INVENTARIO_DESMEMB_3" />
+        <AssociationConnector Association="YepLogModel.FK_TB_ITENS_INVENTARIO_4" />
+        <EntityTypeShape EntityType="YepLogModel.ESCADPRO" Width="1.5" PointX="6.125" PointY="4.125" />
+        <EntityTypeShape EntityType="YepLogModel.TB_PREC_REC_ITEM" Width="1.5" PointX="7.625" PointY="10.625" />
+        <EntityTypeShape EntityType="YepLogModel.TB_USUARIO" Width="1.5" PointX="8.875" PointY="4.375" />
+        <AssociationConnector Association="YepLogModel.FK_TB_PREC_REC_ITEM_2" />
+        <AssociationConnector Association="YepLogModel.FK_TB_CAIXA_2" />
+        <EntityTypeShape EntityType="YepLogModel.TB_TORRE_INVENTARIO" Width="1.5" PointX="5.75" PointY="25" />
+        <EntityTypeShape EntityType="YepLogModel.TB_TORRE_USR_INVENTARIO" Width="1.5" PointX="11" PointY="0.75" />
+        <AssociationConnector Association="YepLogModel.FK_TB_TORRE_USR_INVENTARIO_1" />
+        <AssociationConnector Association="YepLogModel.FK_TB_ITENS_INVENTARIO_6" />
+        <AssociationConnector Association="YepLogModel.FK_TB_ITENS_INVENTARIO_7" />
+        <AssociationConnector Association="YepLogModel.FK_TB_ITENS_INVENTARIO_8" />
+        <AssociationConnector Association="YepLogModel.FK_TB_TORRE_USR_INVENTARIO_2" />
+        <EntityTypeShape EntityType="YepLogModel.TB_STATUS_ITEM_INVENTARIO" Width="1.5" PointX="10.5" PointY="8.125" />
+        <AssociationConnector Association="YepLogModel.FK_TB_ITENS_INVENTARIO_5" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

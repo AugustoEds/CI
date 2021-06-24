@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s1="http://tempuri.org/AbstractTypes" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="SendEmail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="subject" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="content" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="to" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="descriptionAccount" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendEmailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendEmailResult" type="tns:ResponseDto" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ResponseDto">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Type" type="tns:ResponseTypeDto" />
+          <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ObjReturn" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="ResponseTypeDto">
+        <s:restriction base="s:string">
+          <s:enumeration value="Success" />
+          <s:enumeration value="BusinessRule" />
+          <s:enumeration value="Exception" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="SendEmailAttachment">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="subject" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="content" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="to" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="attachment" type="s:base64Binary" />
+            <s:element minOccurs="1" maxOccurs="1" name="fileExtension" type="tns:FileExtensionDto" />
+            <s:element minOccurs="0" maxOccurs="1" name="descriptionAccount" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:simpleType name="FileExtensionDto">
+        <s:restriction base="s:string">
+          <s:enumeration value="None" />
+          <s:enumeration value="Xls" />
+          <s:enumeration value="Txt" />
+          <s:enumeration value="Pdf" />
+          <s:enumeration value="Zip" />
+          <s:enumeration value="Rar" />
+          <s:enumeration value="Doc" />
+          <s:enumeration value="Csv" />
+          <s:enumeration value="Xlsx" />
+          <s:enumeration value="Docx" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="SendEmailAttachmentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendEmailAttachmentResult" type="tns:ResponseDto" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendEmailSeen">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="emailSender" type="tns:EmailSenderDto" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="EmailSenderDto">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Subject" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Content" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LsTo" type="tns:ArrayOfString" />
+          <s:element minOccurs="0" maxOccurs="1" name="LsCarbonCopy" type="tns:ArrayOfString" />
+          <s:element minOccurs="0" maxOccurs="1" name="LsBlindCarbonCopy" type="tns:ArrayOfString" />
+          <s:element minOccurs="0" maxOccurs="1" name="DescriptionAccount" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LsAttachment" type="tns:ArrayOfAttachmentDto" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfAttachmentDto">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="AttachmentDto" nillable="true" type="tns:AttachmentDto" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AttachmentDto">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Attachment" type="s:base64Binary" />
+          <s:element minOccurs="1" maxOccurs="1" name="FileExtension" type="tns:FileExtensionDto" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SendEmailSeenResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendEmailSeenResult" type="tns:ResponseDto" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendEmailYepLog">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="emailSender" type="tns:EmailSenderDto" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendEmailYepLogResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendEmailYepLogResult" type="tns:ResponseDto" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ResponseDto" nillable="true" type="tns:ResponseDto" />
+    </s:schema>
+    <s:schema targetNamespace="http://tempuri.org/AbstractTypes">
+      <s:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <s:complexType name="StringArray">
+        <s:complexContent mixed="false">
+          <s:restriction base="soapenc:Array">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="unbounded" name="String" type="s:string" />
+            </s:sequence>
+          </s:restriction>
+        </s:complexContent>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="SendEmailSoapIn">
+    <wsdl:part name="parameters" element="tns:SendEmail" />
+  </wsdl:message>
+  <wsdl:message name="SendEmailSoapOut">
+    <wsdl:part name="parameters" element="tns:SendEmailResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendEmailAttachmentSoapIn">
+    <wsdl:part name="parameters" element="tns:SendEmailAttachment" />
+  </wsdl:message>
+  <wsdl:message name="SendEmailAttachmentSoapOut">
+    <wsdl:part name="parameters" element="tns:SendEmailAttachmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendEmailSeenSoapIn">
+    <wsdl:part name="parameters" element="tns:SendEmailSeen" />
+  </wsdl:message>
+  <wsdl:message name="SendEmailSeenSoapOut">
+    <wsdl:part name="parameters" element="tns:SendEmailSeenResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendEmailYepLogSoapIn">
+    <wsdl:part name="parameters" element="tns:SendEmailYepLog" />
+  </wsdl:message>
+  <wsdl:message name="SendEmailYepLogSoapOut">
+    <wsdl:part name="parameters" element="tns:SendEmailYepLogResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendEmailHttpGetIn">
+    <wsdl:part name="subject" type="s:string" />
+    <wsdl:part name="content" type="s:string" />
+    <wsdl:part name="to" type="s:string" />
+    <wsdl:part name="descriptionAccount" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SendEmailHttpGetOut">
+    <wsdl:part name="Body" element="tns:ResponseDto" />
+  </wsdl:message>
+  <wsdl:message name="SendEmailAttachmentHttpGetIn">
+    <wsdl:part name="subject" type="s:string" />
+    <wsdl:part name="content" type="s:string" />
+    <wsdl:part name="to" type="s:string" />
+    <wsdl:part name="attachment" type="s1:StringArray" />
+    <wsdl:part name="fileExtension" type="s:string" />
+    <wsdl:part name="descriptionAccount" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SendEmailAttachmentHttpGetOut">
+    <wsdl:part name="Body" element="tns:ResponseDto" />
+  </wsdl:message>
+  <wsdl:message name="SendEmailHttpPostIn">
+    <wsdl:part name="subject" type="s:string" />
+    <wsdl:part name="content" type="s:string" />
+    <wsdl:part name="to" type="s:string" />
+    <wsdl:part name="descriptionAccount" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SendEmailHttpPostOut">
+    <wsdl:part name="Body" element="tns:ResponseDto" />
+  </wsdl:message>
+  <wsdl:message name="SendEmailAttachmentHttpPostIn">
+    <wsdl:part name="subject" type="s:string" />
+    <wsdl:part name="content" type="s:string" />
+    <wsdl:part name="to" type="s:string" />
+    <wsdl:part name="attachment" type="s1:StringArray" />
+    <wsdl:part name="fileExtension" type="s:string" />
+    <wsdl:part name="descriptionAccount" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SendEmailAttachmentHttpPostOut">
+    <wsdl:part name="Body" element="tns:ResponseDto" />
+  </wsdl:message>
+  <wsdl:portType name="ActionToolUiSoap">
+    <wsdl:operation name="SendEmail">
+      <wsdl:input message="tns:SendEmailSoapIn" />
+      <wsdl:output message="tns:SendEmailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendEmailAttachment">
+      <wsdl:input message="tns:SendEmailAttachmentSoapIn" />
+      <wsdl:output message="tns:SendEmailAttachmentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendEmailSeen">
+      <wsdl:input message="tns:SendEmailSeenSoapIn" />
+      <wsdl:output message="tns:SendEmailSeenSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendEmailYepLog">
+      <wsdl:input message="tns:SendEmailYepLogSoapIn" />
+      <wsdl:output message="tns:SendEmailYepLogSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="ActionToolUiHttpGet">
+    <wsdl:operation name="SendEmail">
+      <wsdl:input message="tns:SendEmailHttpGetIn" />
+      <wsdl:output message="tns:SendEmailHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendEmailAttachment">
+      <wsdl:input message="tns:SendEmailAttachmentHttpGetIn" />
+      <wsdl:output message="tns:SendEmailAttachmentHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="ActionToolUiHttpPost">
+    <wsdl:operation name="SendEmail">
+      <wsdl:input message="tns:SendEmailHttpPostIn" />
+      <wsdl:output message="tns:SendEmailHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendEmailAttachment">
+      <wsdl:input message="tns:SendEmailAttachmentHttpPostIn" />
+      <wsdl:output message="tns:SendEmailAttachmentHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ActionToolUiSoap" type="tns:ActionToolUiSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SendEmail">
+      <soap:operation soapAction="http://tempuri.org/SendEmail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendEmailAttachment">
+      <soap:operation soapAction="http://tempuri.org/SendEmailAttachment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendEmailSeen">
+      <soap:operation soapAction="http://tempuri.org/SendEmailSeen" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendEmailYepLog">
+      <soap:operation soapAction="http://tempuri.org/SendEmailYepLog" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ActionToolUiSoap12" type="tns:ActionToolUiSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SendEmail">
+      <soap12:operation soapAction="http://tempuri.org/SendEmail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendEmailAttachment">
+      <soap12:operation soapAction="http://tempuri.org/SendEmailAttachment" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendEmailSeen">
+      <soap12:operation soapAction="http://tempuri.org/SendEmailSeen" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendEmailYepLog">
+      <soap12:operation soapAction="http://tempuri.org/SendEmailYepLog" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ActionToolUiHttpGet" type="tns:ActionToolUiHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="SendEmail">
+      <http:operation location="/SendEmail" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendEmailAttachment">
+      <http:operation location="/SendEmailAttachment" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ActionToolUiHttpPost" type="tns:ActionToolUiHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="SendEmail">
+      <http:operation location="/SendEmail" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendEmailAttachment">
+      <http:operation location="/SendEmailAttachment" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ActionToolUi">
+    <wsdl:port name="ActionToolUiSoap" binding="tns:ActionToolUiSoap">
+      <soap:address location="http://192.168.1.28:85/ActionTool.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ActionToolUiSoap12" binding="tns:ActionToolUiSoap12">
+      <soap12:address location="http://192.168.1.28:85/ActionTool.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ActionToolUiHttpGet" binding="tns:ActionToolUiHttpGet">
+      <http:address location="http://192.168.1.28:85/ActionTool.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ActionToolUiHttpPost" binding="tns:ActionToolUiHttpPost">
+      <http:address location="http://192.168.1.28:85/ActionTool.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
