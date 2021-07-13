@@ -1,0 +1,433 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="FirebirdModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="ESCADDEP">
+    <Key>
+      <PropertyRef Name="CODIGO" />
+    </Key>
+    <Property Name="CODIGO" Type="Int32" Nullable="false" />
+    <Property Name="DESCRICAO" Type="String" MaxLength="40" FixedLength="false" Nullable="false" />
+    <Property Name="TIPO_DEP" Type="String" MaxLength="40" FixedLength="false" Nullable="false" />
+    <Property Name="FORNECEDOR" Type="Int32" />
+    <Property Name="CLIENTE" Type="Int32" />
+    <Property Name="DATA_CAD" Type="DateTime" />
+    <Property Name="DATA_ALT" Type="DateTime" />
+    <Property Name="CLASSIFICACAO_DEP" Type="String" MaxLength="40" FixedLength="false" Nullable="false" />
+    <Property Name="CODIGO_CLASSIFICACAO" Type="Int32" />
+    <Property Name="FORNCEDOR_NF" Type="Int32" />
+    <Property Name="FORNECEDOR_NF" Type="Int32" />
+    <Property Name="FLAG_PORTAL_LAB" Type="String" MaxLength="3" FixedLength="false" Nullable="false" />
+    <Property Name="CONTROLAESTOQUE" Type="String" MaxLength="1" FixedLength="false" Nullable="false" />
+    <NavigationProperty Name="TB_PRE_REC" Relationship="FirebirdModel.FK_TB_PRE_REC_1" FromRole="ESCADDEP" ToRole="TB_PRE_REC" />
+    <NavigationProperty Name="TB_PRE_REC1" Relationship="FirebirdModel.FK_TB_PRE_REC_2" FromRole="ESCADDEP" ToRole="TB_PRE_REC" />
+  </EntityType>
+  <EntityType Name="ESCADPRO">
+    <Key>
+      <PropertyRef Name="CODIGO" />
+    </Key>
+    <Property Name="CODIGO" Type="String" MaxLength="15" FixedLength="false" Nullable="false" />
+    <Property Name="DESCRICAO" Type="String" MaxLength="100" FixedLength="false" Nullable="false" />
+    <Property Name="NUM_DESENHO" Type="String" MaxLength="40" FixedLength="false" Nullable="false" />
+    <Property Name="DATA_DESENHO" Type="DateTime" />
+    <Property Name="GRUPO" Type="String" MaxLength="4" FixedLength="false" Nullable="false" />
+    <Property Name="SUB_GRUPO" Type="String" MaxLength="4" FixedLength="false" Nullable="false" />
+    <Property Name="TIPO" Type="Int32" />
+    <Property Name="COD_ESTRUTURA" Type="String" MaxLength="15" FixedLength="false" Nullable="false" />
+    <Property Name="UNIDADE" Type="String" MaxLength="3" FixedLength="false" Nullable="false" />
+    <Property Name="PESO_LIQUIDO" Type="Double" />
+    <Property Name="SITUACAO" Type="String" MaxLength="10" FixedLength="false" Nullable="false" />
+    <Property Name="ESTOQUE_MAXIMO" Type="Double" />
+    <Property Name="ESTOQUE_MINIMO" Type="Double" />
+    <Property Name="CLASSIFICACAO_FISCAL" Type="String" MaxLength="12" FixedLength="false" Nullable="false" />
+    <Property Name="ALIQUOTA_IPI" Type="Double" />
+    <Property Name="FLAG_RED_ICMS" Type="String" MaxLength="3" FixedLength="false" Nullable="false" />
+    <Property Name="DATA_CAD" Type="DateTime" />
+    <Property Name="DATA_ALT" Type="DateTime" />
+    <Property Name="ULT_MOV" Type="DateTime" />
+    <Property Name="FLAG_VALORIZA" Type="String" MaxLength="1" FixedLength="false" Nullable="false" />
+    <Property Name="SITUACAO_INV" Type="String" MaxLength="11" FixedLength="false" Nullable="false" />
+    <Property Name="FLAG_CRED_ICMS" Type="String" MaxLength="3" FixedLength="false" Nullable="false" />
+    <Property Name="FLAG_CRED_IPI" Type="String" MaxLength="3" FixedLength="false" Nullable="false" />
+    <Property Name="ORIGEM" Type="Int32" />
+    <Property Name="COD_ALTERNATIVO" Type="String" MaxLength="15" FixedLength="false" Nullable="false" />
+    <Property Name="PRECO_PECA" Type="Double" />
+    <Property Name="PRECO_VENDA" Type="Double" />
+    <Property Name="MARGEM_LUCRO" Type="Double" />
+    <Property Name="CUSTO_UNITARIO" Type="Double" />
+    <Property Name="VERSAO_ATUAL" Type="Int32" />
+    <Property Name="UTILIZA_LOTE" Type="String" MaxLength="3" FixedLength="false" Nullable="false" />
+    <Property Name="SOL_LOTE_FORN" Type="String" MaxLength="3" FixedLength="false" Nullable="false" />
+    <Property Name="METODO_LOTE" Type="String" MaxLength="10" FixedLength="false" Nullable="false" />
+    <Property Name="CHAVE_METODO" Type="String" MaxLength="20" FixedLength="false" Nullable="false" />
+    <Property Name="DEF_LOTE_ENT" Type="String" MaxLength="12" FixedLength="false" Nullable="false" />
+    <Property Name="NUM_LOTE_ENT" Type="Int32" />
+    <Property Name="DEF_LOTE_INV" Type="String" MaxLength="12" FixedLength="false" Nullable="false" />
+    <Property Name="NUM_LOTE_INV" Type="Int32" />
+    <Property Name="SITUACAO_LOTE" Type="String" MaxLength="15" FixedLength="false" Nullable="false" />
+    <Property Name="QTDE_CAIXA" Type="Double" />
+    <Property Name="QTDE_PALLET" Type="Double" />
+    <Property Name="REDUZIDO" Type="String" MaxLength="6" FixedLength="false" Nullable="false" />
+    <Property Name="DESCRICAO_FAT" Type="String" MaxLength="200" FixedLength="false" Nullable="false" />
+    <Property Name="CLASSIFICACAO_ITEM" Type="String" MaxLength="15" FixedLength="false" Nullable="false" />
+    <Property Name="GRAMATURA" Type="Double" />
+    <Property Name="TIPO_ONDA" Type="String" MaxLength="2" FixedLength="false" Nullable="false" />
+    <Property Name="TEMPO_PREP" Type="Double" />
+    <Property Name="TEMPO_OPER" Type="Double" />
+    <Property Name="TEMPO_MAQ" Type="Double" />
+    <Property Name="TEMPO_FABR" Type="Double" />
+    <Property Name="QTDE_BASE" Type="Double" />
+    <Property Name="DIAGONAL_MENOR" Type="Double" />
+    <Property Name="DIAGONAL_MAIOR" Type="Double" />
+    <Property Name="ESPESSURA" Type="Double" />
+    <Property Name="CORDAO" Type="Double" />
+    <Property Name="FLAG_CRED_PIS" Type="String" MaxLength="3" FixedLength="false" Nullable="false" />
+    <Property Name="FLAG_CRED_COFINS" Type="String" MaxLength="3" FixedLength="false" Nullable="false" />
+    <Property Name="TOLER_MENOR" Type="Double" />
+    <Property Name="TOLER_MAIOR" Type="Double" />
+    <Property Name="SENHA_CAD" Type="String" MaxLength="10" FixedLength="false" Nullable="false" />
+    <Property Name="SENHA_ALT" Type="String" MaxLength="10" FixedLength="false" Nullable="false" />
+    <Property Name="ANALISE_FIS_QUI" Type="Int32" />
+    <Property Name="ANALISE_MICROBI" Type="Int32" />
+    <Property Name="CODIGO_EAN_UCC" Type="String" MaxLength="14" FixedLength="false" Nullable="false" />
+    <Property Name="QTDE_FRACIONADA" Type="Double" />
+    <Property Name="FLAG_DESTAQUE_IPI" Type="String" MaxLength="3" FixedLength="false" Nullable="false" />
+    <Property Name="PADRAO_LOTE" Type="String" MaxLength="20" FixedLength="false" Nullable="false" />
+    <Property Name="FLAG_VERSAO" Type="String" MaxLength="3" FixedLength="false" Nullable="false" />
+    <Property Name="FLAG_FICHA" Type="String" MaxLength="3" FixedLength="false" Nullable="false" />
+    <Property Name="EMBALAGEM_PADRAO" Type="Int32" />
+    <Property Name="EXCECAO_NCM" Type="String" MaxLength="4" FixedLength="false" Nullable="false" />
+    <Property Name="GENERO" Type="String" MaxLength="4" FixedLength="false" Nullable="false" />
+    <Property Name="COD_SERVICO" Type="String" MaxLength="4" FixedLength="false" Nullable="false" />
+    <Property Name="ALIQUOTA_ISS" Type="Double" />
+    <Property Name="ULT_RG_VISANET_RFI" Type="Int32" />
+    <Property Name="ULT_RG_VISANET_LEG" Type="Int32" />
+    <Property Name="ULT_VISANET_PROV" Type="Int32" />
+    <Property Name="FABRICANTE" Type="String" MaxLength="10" FixedLength="false" Nullable="false" />
+    <Property Name="SUCATA" Type="String" MaxLength="15" FixedLength="false" Nullable="false" />
+    <Property Name="NPA" Type="String" MaxLength="15" FixedLength="false" Nullable="false" />
+    <Property Name="RPA" Type="String" MaxLength="15" FixedLength="false" Nullable="false" />
+    <Property Name="RPT_TRIAGEM" Type="String" MaxLength="15" FixedLength="false" Nullable="false" />
+    <Property Name="RPT_REPARO" Type="String" MaxLength="15" FixedLength="false" Nullable="false" />
+    <Property Name="TECN_DESCONTIN" Type="String" MaxLength="15" FixedLength="false" Nullable="false" />
+    <Property Name="CAPACIDADE_VOLUME" Type="Int32" />
+    <Property Name="CODIGO_SAP" Type="String" MaxLength="15" FixedLength="false" Nullable="false" />
+    <Property Name="RPT_GARANTIA" Type="String" MaxLength="15" FixedLength="false" Nullable="false" />
+    <NavigationProperty Name="TB_PREC_REC_ITEM" Relationship="FirebirdModel.FK_TB_PREC_REC_ITEM_2" FromRole="ESCADPRO" ToRole="TB_PREC_REC_ITEM" />
+  </EntityType>
+  <EntityType Name="ESGRUPRO">
+    <Key>
+      <PropertyRef Name="CODIGO" />
+    </Key>
+    <Property Name="CODIGO" Type="String" MaxLength="4" FixedLength="false" Nullable="false" />
+    <Property Name="DESCRICAO" Type="String" MaxLength="40" FixedLength="false" Nullable="false" />
+    <Property Name="DATA_CAD" Type="DateTime" />
+    <Property Name="DATA_ALT" Type="DateTime" />
+    <Property Name="COD_ESTAB" Type="Int32" />
+    <NavigationProperty Name="TB_CONFIG_GERAIS" Relationship="FirebirdModel.FK_TB_CONFIG_GERAIS_2" FromRole="ESGRUPRO" ToRole="TB_CONFIG_GERAIS" />
+    <NavigationProperty Name="TB_CONFIG_GERAIS1" Relationship="FirebirdModel.FK_TB_CONFIG_GERAIS_3" FromRole="ESGRUPRO" ToRole="TB_CONFIG_GERAIS" />
+    <NavigationProperty Name="TB_CONFIG_GERAIS2" Relationship="FirebirdModel.FK_TB_CONFIG_GERAIS_4" FromRole="ESGRUPRO" ToRole="TB_CONFIG_GERAIS" />
+    <NavigationProperty Name="TB_CONFIG_GERAIS3" Relationship="FirebirdModel.FK_TB_CONFIG_GERAIS_5" FromRole="ESGRUPRO" ToRole="TB_CONFIG_GERAIS" />
+    <NavigationProperty Name="TB_CONFIG_GERAIS4" Relationship="FirebirdModel.FK_TB_CONFIG_GERAIS_6" FromRole="ESGRUPRO" ToRole="TB_CONFIG_GERAIS" />
+    <NavigationProperty Name="TB_CONFIG_GERAIS5" Relationship="FirebirdModel.FK_TB_CONFIG_GERAIS_8" FromRole="ESGRUPRO" ToRole="TB_CONFIG_GERAIS" />
+    <NavigationProperty Name="TB_CONFIG_GERAIS6" Relationship="FirebirdModel.FK_TB_CONFIG_GERAIS_9" FromRole="ESGRUPRO" ToRole="TB_CONFIG_GERAIS" />
+  </EntityType>
+  <EntityType Name="ESSUBPRO">
+    <Key>
+      <PropertyRef Name="CODIGO" />
+    </Key>
+    <Property Name="CODIGO" Type="String" MaxLength="4" FixedLength="false" Nullable="false" />
+    <Property Name="DESCRICAO" Type="String" MaxLength="40" FixedLength="false" Nullable="false" />
+    <Property Name="DATA_CAD" Type="DateTime" />
+    <Property Name="DATA_ALT" Type="DateTime" />
+    <Property Name="COD_ESTAB" Type="Int32" />
+  </EntityType>
+  <EntityContainer Name="FirebirdEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ESCADDEP" EntityType="Self.ESCADDEP" />
+    <EntitySet Name="ESCADPRO" EntityType="Self.ESCADPRO" />
+    <EntitySet Name="ESGRUPRO" EntityType="Self.ESGRUPRO" />
+    <EntitySet Name="ESSUBPRO" EntityType="Self.ESSUBPRO" />
+    <EntitySet Name="TB_CONFIG_GERAIS" EntityType="FirebirdModel.TB_CONFIG_GERAIS" />
+    <AssociationSet Name="FK_TB_CONFIG_GERAIS_2" Association="FirebirdModel.FK_TB_CONFIG_GERAIS_2">
+      <End Role="ESGRUPRO" EntitySet="ESGRUPRO" />
+      <End Role="TB_CONFIG_GERAIS" EntitySet="TB_CONFIG_GERAIS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TB_CONFIG_GERAIS_3" Association="FirebirdModel.FK_TB_CONFIG_GERAIS_3">
+      <End Role="ESGRUPRO" EntitySet="ESGRUPRO" />
+      <End Role="TB_CONFIG_GERAIS" EntitySet="TB_CONFIG_GERAIS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TB_CONFIG_GERAIS_4" Association="FirebirdModel.FK_TB_CONFIG_GERAIS_4">
+      <End Role="ESGRUPRO" EntitySet="ESGRUPRO" />
+      <End Role="TB_CONFIG_GERAIS" EntitySet="TB_CONFIG_GERAIS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TB_CONFIG_GERAIS_5" Association="FirebirdModel.FK_TB_CONFIG_GERAIS_5">
+      <End Role="ESGRUPRO" EntitySet="ESGRUPRO" />
+      <End Role="TB_CONFIG_GERAIS" EntitySet="TB_CONFIG_GERAIS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TB_CONFIG_GERAIS_6" Association="FirebirdModel.FK_TB_CONFIG_GERAIS_6">
+      <End Role="ESGRUPRO" EntitySet="ESGRUPRO" />
+      <End Role="TB_CONFIG_GERAIS" EntitySet="TB_CONFIG_GERAIS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TB_CONFIG_GERAIS_8" Association="FirebirdModel.FK_TB_CONFIG_GERAIS_8">
+      <End Role="ESGRUPRO" EntitySet="ESGRUPRO" />
+      <End Role="TB_CONFIG_GERAIS" EntitySet="TB_CONFIG_GERAIS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TB_CONFIG_GERAIS_9" Association="FirebirdModel.FK_TB_CONFIG_GERAIS_9">
+      <End Role="ESGRUPRO" EntitySet="ESGRUPRO" />
+      <End Role="TB_CONFIG_GERAIS" EntitySet="TB_CONFIG_GERAIS" />
+    </AssociationSet>
+    <EntitySet Name="PCESTPRO_H" EntityType="FirebirdModel.PCESTPRO_H" />
+    <EntitySet Name="PCESTPRO_I" EntityType="FirebirdModel.PCESTPRO_I" />
+    <EntitySet Name="TB_PRE_REC" EntityType="FirebirdModel.TB_PRE_REC" />
+    <EntitySet Name="TB_PREC_REC_ITEM" EntityType="FirebirdModel.TB_PREC_REC_ITEM" />
+    <AssociationSet Name="FK_TB_PRE_REC_1" Association="FirebirdModel.FK_TB_PRE_REC_1">
+      <End Role="ESCADDEP" EntitySet="ESCADDEP" />
+      <End Role="TB_PRE_REC" EntitySet="TB_PRE_REC" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TB_PRE_REC_2" Association="FirebirdModel.FK_TB_PRE_REC_2">
+      <End Role="ESCADDEP" EntitySet="ESCADDEP" />
+      <End Role="TB_PRE_REC" EntitySet="TB_PRE_REC" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TB_PREC_REC_ITEM_2" Association="FirebirdModel.FK_TB_PREC_REC_ITEM_2">
+      <End Role="ESCADPRO" EntitySet="ESCADPRO" />
+      <End Role="TB_PREC_REC_ITEM" EntitySet="TB_PREC_REC_ITEM" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TB_PREC_REC_ITEM_1" Association="FirebirdModel.FK_TB_PREC_REC_ITEM_1">
+      <End Role="TB_PRE_REC" EntitySet="TB_PRE_REC" />
+      <End Role="TB_PREC_REC_ITEM" EntitySet="TB_PREC_REC_ITEM" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="TB_CONFIG_GERAIS">
+    <Key>
+      <PropertyRef Name="ID_CONFIG" />
+    </Key>
+    <Property Name="ID_CONFIG" Type="Int32" Nullable="false" />
+    <Property Name="DS_PASTA_NF_RECEBIMENTO" Type="String" MaxLength="140" FixedLength="false" Nullable="false" />
+    <Property Name="FL_ANEXA_NF_RECEBIMENTO" Type="String" MaxLength="1" FixedLength="true" Nullable="false" />
+    <Property Name="DT_INCLUSAO" Type="DateTime" />
+    <Property Name="ID_USER_INC" Type="Int32" />
+    <Property Name="DT_ULT_ALTERACAO" Type="DateTime" />
+    <Property Name="ID_USER_ULT_ALT" Type="Int32" />
+    <Property Name="ID_RECUSA_DIV_QUANTIDADE_REC" Type="Int32" />
+    <Property Name="ID_GRUPO_RPA" Type="String" MaxLength="4" FixedLength="false" Nullable="false" />
+    <Property Name="ID_GRUPO_TRIAGEM" Type="String" MaxLength="4" FixedLength="false" Nullable="false" />
+    <Property Name="ID_GRUPO_TEC_DESCONTINUADA" Type="String" MaxLength="4" FixedLength="false" Nullable="false" />
+    <Property Name="ID_GRUPO_NPA" Type="String" MaxLength="4" FixedLength="false" Nullable="false" />
+    <Property Name="ID_GRUPO_RPT_REPARO" Type="String" MaxLength="4" FixedLength="false" Nullable="false" />
+    <Property Name="TP_SEPARACAO" Type="Int32" />
+    <Property Name="ID_LOCAL_DEP_CONTROLADO" Type="Int32" />
+    <Property Name="ID_GRUPO_SUCATA" Type="String" MaxLength="4" FixedLength="false" Nullable="false" />
+    <Property Name="ID_GRUPO_RPT_GARANTIA" Type="String" MaxLength="4" FixedLength="false" Nullable="false" />
+    <NavigationProperty Name="ESGRUPRO" Relationship="FirebirdModel.FK_TB_CONFIG_GERAIS_2" FromRole="TB_CONFIG_GERAIS" ToRole="ESGRUPRO" />
+    <NavigationProperty Name="ESGRUPRO1" Relationship="FirebirdModel.FK_TB_CONFIG_GERAIS_3" FromRole="TB_CONFIG_GERAIS" ToRole="ESGRUPRO" />
+    <NavigationProperty Name="ESGRUPRO2" Relationship="FirebirdModel.FK_TB_CONFIG_GERAIS_4" FromRole="TB_CONFIG_GERAIS" ToRole="ESGRUPRO" />
+    <NavigationProperty Name="ESGRUPRO3" Relationship="FirebirdModel.FK_TB_CONFIG_GERAIS_5" FromRole="TB_CONFIG_GERAIS" ToRole="ESGRUPRO" />
+    <NavigationProperty Name="ESGRUPRO4" Relationship="FirebirdModel.FK_TB_CONFIG_GERAIS_6" FromRole="TB_CONFIG_GERAIS" ToRole="ESGRUPRO" />
+    <NavigationProperty Name="ESGRUPRO5" Relationship="FirebirdModel.FK_TB_CONFIG_GERAIS_8" FromRole="TB_CONFIG_GERAIS" ToRole="ESGRUPRO" />
+    <NavigationProperty Name="ESGRUPRO6" Relationship="FirebirdModel.FK_TB_CONFIG_GERAIS_9" FromRole="TB_CONFIG_GERAIS" ToRole="ESGRUPRO" />
+  </EntityType>
+  <Association Name="FK_TB_CONFIG_GERAIS_2">
+    <End Type="FirebirdModel.ESGRUPRO" Role="ESGRUPRO" Multiplicity="1" />
+    <End Type="FirebirdModel.TB_CONFIG_GERAIS" Role="TB_CONFIG_GERAIS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ESGRUPRO">
+        <PropertyRef Name="CODIGO" />
+      </Principal>
+      <Dependent Role="TB_CONFIG_GERAIS">
+        <PropertyRef Name="ID_GRUPO_RPA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TB_CONFIG_GERAIS_3">
+    <End Type="FirebirdModel.ESGRUPRO" Role="ESGRUPRO" Multiplicity="1" />
+    <End Type="FirebirdModel.TB_CONFIG_GERAIS" Role="TB_CONFIG_GERAIS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ESGRUPRO">
+        <PropertyRef Name="CODIGO" />
+      </Principal>
+      <Dependent Role="TB_CONFIG_GERAIS">
+        <PropertyRef Name="ID_GRUPO_TRIAGEM" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TB_CONFIG_GERAIS_4">
+    <End Type="FirebirdModel.ESGRUPRO" Role="ESGRUPRO" Multiplicity="1" />
+    <End Type="FirebirdModel.TB_CONFIG_GERAIS" Role="TB_CONFIG_GERAIS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ESGRUPRO">
+        <PropertyRef Name="CODIGO" />
+      </Principal>
+      <Dependent Role="TB_CONFIG_GERAIS">
+        <PropertyRef Name="ID_GRUPO_TEC_DESCONTINUADA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TB_CONFIG_GERAIS_5">
+    <End Type="FirebirdModel.ESGRUPRO" Role="ESGRUPRO" Multiplicity="1" />
+    <End Type="FirebirdModel.TB_CONFIG_GERAIS" Role="TB_CONFIG_GERAIS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ESGRUPRO">
+        <PropertyRef Name="CODIGO" />
+      </Principal>
+      <Dependent Role="TB_CONFIG_GERAIS">
+        <PropertyRef Name="ID_GRUPO_NPA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TB_CONFIG_GERAIS_6">
+    <End Type="FirebirdModel.ESGRUPRO" Role="ESGRUPRO" Multiplicity="1" />
+    <End Type="FirebirdModel.TB_CONFIG_GERAIS" Role="TB_CONFIG_GERAIS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ESGRUPRO">
+        <PropertyRef Name="CODIGO" />
+      </Principal>
+      <Dependent Role="TB_CONFIG_GERAIS">
+        <PropertyRef Name="ID_GRUPO_RPT_REPARO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TB_CONFIG_GERAIS_8">
+    <End Type="FirebirdModel.ESGRUPRO" Role="ESGRUPRO" Multiplicity="1" />
+    <End Type="FirebirdModel.TB_CONFIG_GERAIS" Role="TB_CONFIG_GERAIS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ESGRUPRO">
+        <PropertyRef Name="CODIGO" />
+      </Principal>
+      <Dependent Role="TB_CONFIG_GERAIS">
+        <PropertyRef Name="ID_GRUPO_SUCATA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TB_CONFIG_GERAIS_9">
+    <End Type="FirebirdModel.ESGRUPRO" Role="ESGRUPRO" Multiplicity="1" />
+    <End Type="FirebirdModel.TB_CONFIG_GERAIS" Role="TB_CONFIG_GERAIS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ESGRUPRO">
+        <PropertyRef Name="CODIGO" />
+      </Principal>
+      <Dependent Role="TB_CONFIG_GERAIS">
+        <PropertyRef Name="ID_GRUPO_RPT_GARANTIA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="PCESTPRO_H">
+    <Key>
+      <PropertyRef Name="ESTRUT_ID" />
+    </Key>
+    <Property Name="ESTRUT_ID" Type="Int32" Nullable="false" />
+    <Property Name="COD_ITEM" Type="String" Nullable="false" MaxLength="15" FixedLength="false" />
+    <Property Name="TIPO" Type="String" Nullable="false" MaxLength="40" FixedLength="false" />
+    <Property Name="VERSAO" Type="Int32" />
+    <Property Name="DT_INICIO" Type="DateTime" />
+    <Property Name="DT_TERMINO" Type="DateTime" />
+    <Property Name="USUARIO" Type="String" MaxLength="10" FixedLength="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PCESTPRO_I">
+    <Key>
+      <PropertyRef Name="ESTRUT_ID" />
+      <PropertyRef Name="ITEM_ID" />
+    </Key>
+    <Property Name="ESTRUT_ID" Type="Int32" Nullable="false" />
+    <Property Name="ITEM_ID" Type="Int32" Nullable="false" />
+    <Property Name="INSUMO" Type="String" Nullable="false" MaxLength="15" FixedLength="false" />
+    <Property Name="NIVEL" Type="Int32" Nullable="false" />
+    <Property Name="INSUMO_PAI" Type="String" MaxLength="15" FixedLength="false" Nullable="false" />
+    <Property Name="QTDE" Type="Int32" />
+    <Property Name="EXPLAB" Type="String" MaxLength="1" FixedLength="true" Nullable="false" />
+    <Property Name="LIBERAINSUMO" Type="String" MaxLength="1" FixedLength="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_PRE_REC">
+    <Key>
+      <PropertyRef Name="ID_PRE_REC" />
+    </Key>
+    <Property Name="ID_PRE_REC" Type="Int32" Nullable="false" />
+    <Property Name="NR_NOTA_FISCAL" Type="String" MaxLength="20" FixedLength="false" Nullable="false" />
+    <Property Name="NR_SERIE" Type="String" MaxLength="5" FixedLength="false" Nullable="false" />
+    <Property Name="DT_EMISSAO_NF" Type="DateTime" />
+    <Property Name="ID_DEPOSITO_ORIGEM" Type="Int32" />
+    <Property Name="DS_CAMINHO_NF" Type="String" MaxLength="140" FixedLength="false" Nullable="false" />
+    <Property Name="DT_INCLUSAO" Type="DateTime" />
+    <Property Name="ID_USER_INC" Type="Int32" />
+    <Property Name="DT_ULT_ALTERACAO" Type="DateTime" />
+    <Property Name="ID_USER_ULT_ALT" Type="Int32" />
+    <Property Name="ST_PRE_REC" Type="Int32" />
+    <Property Name="ID_DEPOSITO_DESTINO" Type="Int32" />
+    <Property Name="ID_MOTIVO_RECUSA" Type="Int32" />
+    <Property Name="ID_FLUXO" Type="Int32" />
+    <Property Name="ID_TIPO_PRE_REC" Type="Int32" />
+    <Property Name="DT_RECEBIMENTO" Type="DateTime" />
+    <Property Name="NR_PEDIDO_COMPRA" Type="String" MaxLength="20" FixedLength="false" Nullable="false" />
+    <Property Name="DT_PEDIDO_COMPRA" Type="DateTime" />
+    <Property Name="NR_NOTA_FISCAL_COMPRA" Type="String" MaxLength="20" FixedLength="false" Nullable="false" />
+    <NavigationProperty Name="ESCADDEP" Relationship="FirebirdModel.FK_TB_PRE_REC_1" FromRole="TB_PRE_REC" ToRole="ESCADDEP" />
+    <NavigationProperty Name="ESCADDEP1" Relationship="FirebirdModel.FK_TB_PRE_REC_2" FromRole="TB_PRE_REC" ToRole="ESCADDEP" />
+    <NavigationProperty Name="TB_PREC_REC_ITEM" Relationship="FirebirdModel.FK_TB_PREC_REC_ITEM_1" FromRole="TB_PRE_REC" ToRole="TB_PREC_REC_ITEM" />
+  </EntityType>
+  <EntityType Name="TB_PREC_REC_ITEM">
+    <Key>
+      <PropertyRef Name="ID_PRE_REC_ITEM" />
+    </Key>
+    <Property Name="ID_PRE_REC_ITEM" Type="Int32" Nullable="false" />
+    <Property Name="ID_PRE_REC" Type="Int32" />
+    <Property Name="QT_VOLUME" Type="Decimal" Precision="14" Scale="2" />
+    <Property Name="QT_UNIDADE_VOLUME" Type="Decimal" Precision="14" Scale="2" />
+    <Property Name="DT_INCLUSAO" Type="DateTime" />
+    <Property Name="ID_USER_INC" Type="Int32" />
+    <Property Name="ID_ULT_ALTERACAO" Type="DateTime" />
+    <Property Name="ID_USER_ULT_ALT" Type="Int32" />
+    <Property Name="ID_ITEM_YEP" Type="String" MaxLength="15" FixedLength="false" Nullable="false" />
+    <Property Name="ID_INSPEC" Type="Int32" />
+    <Property Name="QT_REJEICAO" Type="Int32" />
+    <Property Name="FL_TESTE_FUNC_RAPIDO" Type="String" MaxLength="1" FixedLength="false" Nullable="false" />
+    <Property Name="FL_TESTE_EXAME_VISUAL" Type="String" MaxLength="1" FixedLength="false" Nullable="false" />
+    <Property Name="DS_OBSERVACAO" Type="String" MaxLength="3000" FixedLength="false" Nullable="false" />
+    <NavigationProperty Name="ESCADPRO" Relationship="FirebirdModel.FK_TB_PREC_REC_ITEM_2" FromRole="TB_PREC_REC_ITEM" ToRole="ESCADPRO" />
+    <NavigationProperty Name="TB_PRE_REC" Relationship="FirebirdModel.FK_TB_PREC_REC_ITEM_1" FromRole="TB_PREC_REC_ITEM" ToRole="TB_PRE_REC" />
+  </EntityType>
+  <Association Name="FK_TB_PRE_REC_1">
+    <End Type="FirebirdModel.ESCADDEP" Role="ESCADDEP" Multiplicity="0..1" />
+    <End Type="FirebirdModel.TB_PRE_REC" Role="TB_PRE_REC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ESCADDEP">
+        <PropertyRef Name="CODIGO" />
+      </Principal>
+      <Dependent Role="TB_PRE_REC">
+        <PropertyRef Name="ID_DEPOSITO_ORIGEM" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TB_PRE_REC_2">
+    <End Type="FirebirdModel.ESCADDEP" Role="ESCADDEP" Multiplicity="0..1" />
+    <End Type="FirebirdModel.TB_PRE_REC" Role="TB_PRE_REC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ESCADDEP">
+        <PropertyRef Name="CODIGO" />
+      </Principal>
+      <Dependent Role="TB_PRE_REC">
+        <PropertyRef Name="ID_DEPOSITO_ORIGEM" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TB_PREC_REC_ITEM_2">
+    <End Type="FirebirdModel.ESCADPRO" Role="ESCADPRO" Multiplicity="1" />
+    <End Type="FirebirdModel.TB_PREC_REC_ITEM" Role="TB_PREC_REC_ITEM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ESCADPRO">
+        <PropertyRef Name="CODIGO" />
+      </Principal>
+      <Dependent Role="TB_PREC_REC_ITEM">
+        <PropertyRef Name="ID_ITEM_YEP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TB_PREC_REC_ITEM_1">
+    <End Type="FirebirdModel.TB_PRE_REC" Role="TB_PRE_REC" Multiplicity="0..1" />
+    <End Type="FirebirdModel.TB_PREC_REC_ITEM" Role="TB_PREC_REC_ITEM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TB_PRE_REC">
+        <PropertyRef Name="ID_PRE_REC" />
+      </Principal>
+      <Dependent Role="TB_PREC_REC_ITEM">
+        <PropertyRef Name="ID_PRE_REC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

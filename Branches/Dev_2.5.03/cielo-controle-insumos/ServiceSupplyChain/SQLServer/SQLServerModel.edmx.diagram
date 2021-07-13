@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="c03e9b7f3e6f41638728e5e9318f4c3e" Name="Diagram1" ZoomLevel="88">
+        <EntityTypeShape EntityType="SQLServerModel.RL_AGRUPAMENTO_TIPOS_PRODUTO" Width="1.5" PointX="10.5" PointY="64" />
+        <EntityTypeShape EntityType="SQLServerModel.TB_AGRUPAMENTO_PROGRAMACAO_PRODUCAO" Width="1.5" PointX="10.5" PointY="57.125" />
+        <EntityTypeShape EntityType="SQLServerModel.TB_AGRUPAMENTO_TIPO_PRODUTO" Width="1.5" PointX="8.25" PointY="74" />
+        <EntityTypeShape EntityType="SQLServerModel.TB_APROVEITAMENTO_TRIAGEM" Width="1.5" PointX="0.75" PointY="3.75" />
+        <EntityTypeShape EntityType="SQLServerModel.TB_APROVEITAMENTO_TRIAGEM_ANALITICO" Width="1.5" PointX="2.75" PointY="3.75" />
+        <EntityTypeShape EntityType="SQLServerModel.TB_CONFIG_GERAIS" Width="1.5" PointX="3" PointY="32.375" />
+        <EntityTypeShape EntityType="SQLServerModel.TB_DEPOSITO" Width="1.5" PointX="0.75" PointY="29.5" />
+        <EntityTypeShape EntityType="SQLServerModel.TB_DEPOSITO_CD" Width="1.5" PointX="9" PointY="25.5" />
+        <EntityTypeShape EntityType="SQLServerModel.TB_ESTRUTURA_TIPO_PRODUTO" Width="1.5" PointX="10.5" PointY="46.875" />
+        <EntityTypeShape EntityType="SQLServerModel.TB_GRUPO_PRODUTO" Width="1.5" PointX="0.75" PointY="32.875" />
+        <EntityTypeShape EntityType="SQLServerModel.TB_LOG_ITEM" Width="1.5" PointX="3" PointY="0.875" />
+        <EntityTypeShape EntityType="SQLServerModel.TB_LOG_MASTER" Width="1.5" PointX="0.75" PointY="0.875" />
+        <EntityTypeShape EntityType="SQLServerModel.TB_PREVISAO_CONSUMO_PRODUCAO" Width="1.5" PointX="8.25" PointY="36.5" />
+        <EntityTypeShape EntityType="SQLServerModel.TB_PRODUTO" Width="1.5" PointX="6" PointY="30" />
+        <EntityTypeShape EntityType="SQLServerModel.TB_PRODUTO_COMPATIVEL" Width="1.5" PointX="8.25" PointY="33.5" />
+        <EntityTypeShape EntityType="SQLServerModel.TB_PROGRAMACAO_PRODUCAO" Width="1.5" PointX="6" PointY="40.25" />
+        <EntityTypeShape EntityType="SQLServerModel.TB_PROGRAMACAO_RECEBIMENTO" Width="1.5" PointX="3" PointY="26.375" />
+        <EntityTypeShape EntityType="SQLServerModel.TB_REL_ACOMPANHAMENTO_PRODUCAO" Width="1.5" PointX="10.5" PointY="76.625" />
+        <EntityTypeShape EntityType="SQLServerModel.TB_REL_CADEIA_SUPRIMENTOS" Width="1.5" PointX="11.25" PointY="36.625" />
+        <EntityTypeShape EntityType="SQLServerModel.TB_REL_ENTRADA_INSUMOS" Width="1.5" PointX="8.25" PointY="48" />
+        <EntityTypeShape EntityType="SQLServerModel.TB_REL_GERAL_CADEIA_SUPRIMENTOS" Width="1.5" PointX="8.25" PointY="54.375" />
+        <EntityTypeShape EntityType="SQLServerModel.TB_REL_GERENCIAL" Width="1.5" PointX="8.25" PointY="41.25" />
+        <EntityTypeShape EntityType="SQLServerModel.TB_REL_MOV_FORNEC_EXTERNO" Width="1.5" PointX="8.25" PointY="70.25" />
+        <EntityTypeShape EntityType="SQLServerModel.TB_REL_PC_UTILIZACAO" Width="1.5" PointX="4.75" PointY="3.75" />
+        <EntityTypeShape EntityType="SQLServerModel.TB_REL_RPT_GARANTIA" Width="1.5" PointX="8.25" PointY="67.125" />
+        <EntityTypeShape EntityType="SQLServerModel.TB_REL_SAIDA_INSUMOS" Width="1.5" PointX="11.25" PointY="33.25" />
+        <EntityTypeShape EntityType="SQLServerModel.TB_REL_SAIDA_PRODUCAO" Width="1.5" PointX="11.25" PointY="29.375" />
+        <EntityTypeShape EntityType="SQLServerModel.TB_SALDO_ESTOQUE" Width="1.5" PointX="8.25" PointY="29.25" />
+        <EntityTypeShape EntityType="SQLServerModel.TB_SALDO_ETAPA_PROCESSO" Width="1.5" PointX="6.75" PointY="0.75" />
+        <EntityTypeShape EntityType="SQLServerModel.TB_SEMAFORO_COBERTURA_ESTOQUE" Width="1.5" PointX="6" PointY="26.5" />
+        <EntityTypeShape EntityType="SQLServerModel.TB_SITUACAO_PRODUTO" Width="1.5" PointX="8.25" PointY="19.25" />
+        <EntityTypeShape EntityType="SQLServerModel.TB_SUBGRUPO_PRODUTO" Width="1.5" PointX="3.75" PointY="29.625" />
+        <EntityTypeShape EntityType="SQLServerModel.TB_TIPO_PRODUTO" Width="1.5" PointX="8.25" PointY="63.5" />
+        <AssociationConnector Association="SQLServerModel.FK_RL_AGRUPAMENTO_TIPOS_PRODUTO_TB_AGRUPAMENTO_TIPO_PRODUTO" />
+        <AssociationConnector Association="SQLServerModel.FK_RL_AGRUPAMENTO_TIPOS_PRODUTO_TB_TIPO_PRODUTO" />
+        <AssociationConnector Association="SQLServerModel.FK_TB_AGRUPAMENTO_PROGRAMACAO_PRODUCAO_TB_AGRUPAMENTO_TIPO_PRODUTO" />
+        <AssociationConnector Association="SQLServerModel.FK_TB_AGRUPAMENTO_PROGRAMACAO_PRODUCAO_TB_PROGRAMACAO_PRODUCAO" />
+        <AssociationConnector Association="SQLServerModel.FK_TB_REL_ACOMPANHAMENTO_PRODUCAO_TB_AGRUPAMENTO_TIPO_PRODUTO" />
+        <AssociationConnector Association="SQLServerModel.FK_TB_CONFIG_GERAIS_TB_DEPOSITO" />
+        <AssociationConnector Association="SQLServerModel.FK_TB_CONFIG_GERAIS_TB_GRUPO_PRODUTO" />
+        <AssociationConnector Association="SQLServerModel.FK_TB_CONFIG_GERAIS_TB_GRUPO_PRODUTO1" />
+        <AssociationConnector Association="SQLServerModel.FK_TB_CONFIG_GERAIS_TB_GRUPO_PRODUTO2" />
+        <AssociationConnector Association="SQLServerModel.FK_TB_CONFIG_GERAIS_TB_GRUPO_PRODUTO3" />
+        <AssociationConnector Association="SQLServerModel.FK_TB_CONFIG_GERAIS_TB_GRUPO_PRODUTO4" />
+        <AssociationConnector Association="SQLServerModel.FK_TB_CONFIG_GERAIS_TB_GRUPO_PRODUTO5" />
+        <AssociationConnector Association="SQLServerModel.FK_TB_CONFIG_GERAIS_TB_GRUPO_PRODUTO6" />
+        <AssociationConnector Association="SQLServerModel.FK_TB_DEPOSITO_CD_TB_DEPOSITO" />
+        <AssociationConnector Association="SQLServerModel.FK_TB_PROGRAMACAO_RECEBIMENTO_TB_DEPOSITO" />
+        <AssociationConnector Association="SQLServerModel.FK_TB_SALDO_ESTOQUE_TB_DEPOSITO" />
+        <AssociationConnector Association="SQLServerModel.FK_TB_REL_CADEIA_SUPRIMENTOS_TB_DEPOSITO_CD" />
+        <AssociationConnector Association="SQLServerModel.FK_TB_REL_SAIDA_INSUMOS_TB_DEPOSITO_CD" />
+        <AssociationConnector Association="SQLServerModel.FK_TB_REL_SAIDA_PRODUCAO_TB_DEPOSITO_CD" />
+        <AssociationConnector Association="SQLServerModel.FK_TB_ESTRUTURA_TIPO_PRODUTO_TB_PRODUTO" />
+        <AssociationConnector Association="SQLServerModel.FK_TB_ESTRUTURA_TIPO_PRODUTO_TB_PRODUTO1" />
+        <AssociationConnector Association="SQLServerModel.FK_TB_ESTRUTURA_TIPO_PRODUTO_TB_TIPO_PRODUTO" />
+        <AssociationConnector Association="SQLServerModel.FK_TB_PRODUTO_COMPATIVEL_TB_GRUPO_PRODUTO" />
+        <AssociationConnector Association="SQLServerModel.FK_TB_PRODUTO_TB_GRUPO_PRODUTO" />
+        <AssociationConnector Association="SQLServerModel.FK_LOG_ITEM_MASTER" />
+        <AssociationConnector Association="SQLServerModel.FK_TB_PREVISAO_CONSUMO_PRODUCAO_TB_PRODUTO" />
+        <AssociationConnector Association="SQLServerModel.FK_TB_PREVISAO_CONSUMO_PRODUCAO_TB_PROGRAMACAO_PRODUCAO" />
+        <AssociationConnector Association="SQLServerModel.FK_TB_PRODUTO_COMPATIVEL_TB_PRODUTO" />
+        <AssociationConnector Association="SQLServerModel.FK_TB_PRODUTO_COMPATIVEL_TB_PRODUTO1" />
+        <AssociationConnector Association="SQLServerModel.FK_TB_PRODUTO_TB_SUBGRUPO_PRODUTO" />
+        <AssociationConnector Association="SQLServerModel.FK_TB_REL_CADEIA_SUPRIMENTOS_TB_PRODUTO" />
+        <AssociationConnector Association="SQLServerModel.FK_TB_REL_CADEIA_SUPRIMENTOS_TB_PRODUTO1" />
+        <AssociationConnector Association="SQLServerModel.FK_TB_REL_CADEIA_SUPRIMENTOS_TB_PRODUTO2" />
+        <AssociationConnector Association="SQLServerModel.FK_TB_REL_CADEIA_SUPRIMENTOS_TB_PRODUTO3" />
+        <AssociationConnector Association="SQLServerModel.FK_TB_REL_CADEIA_SUPRIMENTOS_TB_PRODUTO4" />
+        <AssociationConnector Association="SQLServerModel.FK_TB_REL_CADEIA_SUPRIMENTOS_TB_PRODUTO5" />
+        <AssociationConnector Association="SQLServerModel.FK_TB_REL_CADEIA_SUPRIMENTOS_TB_PRODUTO6" />
+        <AssociationConnector Association="SQLServerModel.FK_TB_REL_ENTRADA_INSUMOS_TB_PRODUTO" />
+        <AssociationConnector Association="SQLServerModel.FK_TB_REL_GERAL_CADEIA_SUPRIMENTOS_TB_PRODUTO" />
+        <AssociationConnector Association="SQLServerModel.FK_TB_REL_GERAL_CADEIA_SUPRIMENTOS_TB_PRODUTO1" />
+        <AssociationConnector Association="SQLServerModel.FK_TB_REL_GERAL_CADEIA_SUPRIMENTOS_TB_PRODUTO2" />
+        <AssociationConnector Association="SQLServerModel.FK_TB_REL_GERAL_CADEIA_SUPRIMENTOS_TB_PRODUTO3" />
+        <AssociationConnector Association="SQLServerModel.FK_TB_REL_GERAL_CADEIA_SUPRIMENTOS_TB_PRODUTO4" />
+        <AssociationConnector Association="SQLServerModel.FK_TB_REL_GERAL_CADEIA_SUPRIMENTOS_TB_PRODUTO5" />
+        <AssociationConnector Association="SQLServerModel.FK_TB_REL_GERAL_CADEIA_SUPRIMENTOS_TB_PRODUTO6" />
+        <AssociationConnector Association="SQLServerModel.FK_TB_REL_GERENCIAL_TB_PRODUTO" />
+        <AssociationConnector Association="SQLServerModel.FK_TB_REL_GERENCIAL_TB_PRODUTO1" />
+        <AssociationConnector Association="SQLServerModel.FK_TB_REL_GERENCIAL_TB_PRODUTO2" />
+        <AssociationConnector Association="SQLServerModel.FK_TB_REL_GERENCIAL_TB_PRODUTO3" />
+        <AssociationConnector Association="SQLServerModel.FK_TB_REL_GERENCIAL_TB_PRODUTO4" />
+        <AssociationConnector Association="SQLServerModel.FK_TB_REL_GERENCIAL_TB_PRODUTO5" />
+        <AssociationConnector Association="SQLServerModel.FK_TB_REL_GERENCIAL_TB_PRODUTO6" />
+        <AssociationConnector Association="SQLServerModel.FK_TB_REL_MOV_FORNEC_EXTERNO_TB_PRODUTO" />
+        <AssociationConnector Association="SQLServerModel.FK_TB_REL_RPT_GARANTIA_TB_PRODUTO" />
+        <AssociationConnector Association="SQLServerModel.FK_TB_REL_SAIDA_INSUMOS_TB_PRODUTO" />
+        <AssociationConnector Association="SQLServerModel.FK_TB_REL_SAIDA_PRODUCAO_TB_PRODUTO" />
+        <AssociationConnector Association="SQLServerModel.FK_TB_SALDO_ESTOQUE_TB_PRODUTO" />
+        <AssociationConnector Association="SQLServerModel.FK_TB_SITUACAO_PRODUTO_TB_PRODUTO" />
+        <AssociationConnector Association="SQLServerModel.FK_TB_TIPO_PRODUTO_TB_PRODUTO" />
+        <AssociationConnector Association="SQLServerModel.FK_TB_SEMAFORO_COBERTURA_ESTOQUE_TB_SUBGRUPO_PRODUTO" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

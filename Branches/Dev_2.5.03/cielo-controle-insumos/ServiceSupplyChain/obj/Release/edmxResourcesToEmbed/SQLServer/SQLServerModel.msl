@@ -1,0 +1,431 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SQLServerModelStoreContainer" CdmEntityContainer="SQLServerEntities">
+    <EntitySetMapping Name="RL_AGRUPAMENTO_TIPOS_PRODUTO">
+      <EntityTypeMapping TypeName="SQLServerModel.RL_AGRUPAMENTO_TIPOS_PRODUTO">
+        <MappingFragment StoreEntitySet="RL_AGRUPAMENTO_TIPOS_PRODUTO">
+          <ScalarProperty Name="ID_TIPO_PRODUTO" ColumnName="ID_TIPO_PRODUTO" />
+          <ScalarProperty Name="ID_AGRUPAMENTO" ColumnName="ID_AGRUPAMENTO" />
+          <ScalarProperty Name="ID_AGRUPAMENTO_ESTRUTURA" ColumnName="ID_AGRUPAMENTO_ESTRUTURA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_AGRUPAMENTO_PROGRAMACAO_PRODUCAO">
+      <EntityTypeMapping TypeName="SQLServerModel.TB_AGRUPAMENTO_PROGRAMACAO_PRODUCAO">
+        <MappingFragment StoreEntitySet="TB_AGRUPAMENTO_PROGRAMACAO_PRODUCAO">
+          <ScalarProperty Name="QT_PREVISAO_PRODUCAO_DIA" ColumnName="QT_PREVISAO_PRODUCAO_DIA" />
+          <ScalarProperty Name="ID_AGRUPAMENTO" ColumnName="ID_AGRUPAMENTO" />
+          <ScalarProperty Name="ID_PROGRAMACAO" ColumnName="ID_PROGRAMACAO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_AGRUPAMENTO_TIPO_PRODUTO">
+      <EntityTypeMapping TypeName="SQLServerModel.TB_AGRUPAMENTO_TIPO_PRODUTO">
+        <MappingFragment StoreEntitySet="TB_AGRUPAMENTO_TIPO_PRODUTO">
+          <ScalarProperty Name="DS_AGRUPAMENTO" ColumnName="DS_AGRUPAMENTO" />
+          <ScalarProperty Name="ID_AGRUPAMENTO" ColumnName="ID_AGRUPAMENTO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_APROVEITAMENTO_TRIAGEM">
+      <EntityTypeMapping TypeName="SQLServerModel.TB_APROVEITAMENTO_TRIAGEM">
+        <MappingFragment StoreEntitySet="TB_APROVEITAMENTO_TRIAGEM">
+          <ScalarProperty Name="QT_TOTAL" ColumnName="QT_TOTAL" />
+          <ScalarProperty Name="QT_RPT_REPARO" ColumnName="QT_RPT_REPARO" />
+          <ScalarProperty Name="QT_RPA" ColumnName="QT_RPA" />
+          <ScalarProperty Name="DS_SUB_GRUPO" ColumnName="DS_SUB_GRUPO" />
+          <ScalarProperty Name="CD_SUB_GRUPO" ColumnName="CD_SUB_GRUPO" />
+          <ScalarProperty Name="DS_PRODUTO" ColumnName="DS_PRODUTO" />
+          <ScalarProperty Name="ID_PRODUTO" ColumnName="ID_PRODUTO" />
+          <ScalarProperty Name="DT_RESUMO" ColumnName="DT_RESUMO" />
+          <ScalarProperty Name="ID_APROVEITAMENTO_TRIAGEM" ColumnName="ID_APROVEITAMENTO_TRIAGEM" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_APROVEITAMENTO_TRIAGEM_ANALITICO">
+      <EntityTypeMapping TypeName="SQLServerModel.TB_APROVEITAMENTO_TRIAGEM_ANALITICO">
+        <MappingFragment StoreEntitySet="TB_APROVEITAMENTO_TRIAGEM_ANALITICO">
+          <ScalarProperty Name="QT_PRODUTO" ColumnName="QT_PRODUTO" />
+          <ScalarProperty Name="DS_GRUPO" ColumnName="DS_GRUPO" />
+          <ScalarProperty Name="CD_GRUPO" ColumnName="CD_GRUPO" />
+          <ScalarProperty Name="CODIGO_SAP" ColumnName="CODIGO_SAP" />
+          <ScalarProperty Name="DS_PRODUTO" ColumnName="DS_PRODUTO" />
+          <ScalarProperty Name="ID_PRODUTO" ColumnName="ID_PRODUTO" />
+          <ScalarProperty Name="DT_RESUMO" ColumnName="DT_RESUMO" />
+          <ScalarProperty Name="ID_APROVEITAMENTO_TRIAGEM_ANALITICO" ColumnName="ID_APROVEITAMENTO_TRIAGEM_ANALITICO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_CONFIG_GERAIS">
+      <EntityTypeMapping TypeName="SQLServerModel.TB_CONFIG_GERAIS">
+        <MappingFragment StoreEntitySet="TB_CONFIG_GERAIS">
+          <ScalarProperty Name="ID_DEPOSITO_SB" ColumnName="ID_DEPOSITO_SB" />
+          <ScalarProperty Name="ID_GRUPO_RPT_GARANTIA" ColumnName="ID_GRUPO_RPT_GARANTIA" />
+          <ScalarProperty Name="ID_GRUPO_TEC_DESCONTINUADA" ColumnName="ID_GRUPO_TEC_DESCONTINUADA" />
+          <ScalarProperty Name="ID_GRUPO_RPT_REPARO" ColumnName="ID_GRUPO_RPT_REPARO" />
+          <ScalarProperty Name="ID_GRUPO_RPT_TRIAGEM" ColumnName="ID_GRUPO_RPT_TRIAGEM" />
+          <ScalarProperty Name="ID_GRUPO_NPA" ColumnName="ID_GRUPO_NPA" />
+          <ScalarProperty Name="ID_GRUPO_RPA" ColumnName="ID_GRUPO_RPA" />
+          <ScalarProperty Name="ID_GRUPO_SUCATA" ColumnName="ID_GRUPO_SUCATA" />
+          <ScalarProperty Name="ID_CONFIG" ColumnName="ID_CONFIG" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_DEPOSITO">
+      <EntityTypeMapping TypeName="SQLServerModel.TB_DEPOSITO">
+        <MappingFragment StoreEntitySet="TB_DEPOSITO">
+          <ScalarProperty Name="DS_DEPOSITO" ColumnName="DS_DEPOSITO" />
+          <ScalarProperty Name="ID_DEPOSITO" ColumnName="ID_DEPOSITO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_DEPOSITO_CD">
+      <EntityTypeMapping TypeName="SQLServerModel.TB_DEPOSITO_CD">
+        <MappingFragment StoreEntitySet="TB_DEPOSITO_CD">
+          <ScalarProperty Name="ID_DEPOSITO" ColumnName="ID_DEPOSITO" />
+          <ScalarProperty Name="ID_CD" ColumnName="ID_CD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_ESTRUTURA_TIPO_PRODUTO">
+      <EntityTypeMapping TypeName="SQLServerModel.TB_ESTRUTURA_TIPO_PRODUTO">
+        <MappingFragment StoreEntitySet="TB_ESTRUTURA_TIPO_PRODUTO">
+          <ScalarProperty Name="QT_INSUMO" ColumnName="QT_INSUMO" />
+          <ScalarProperty Name="ID_INSUMO_PAI" ColumnName="ID_INSUMO_PAI" />
+          <ScalarProperty Name="NR_NIVEL" ColumnName="NR_NIVEL" />
+          <ScalarProperty Name="ID_INSUMO" ColumnName="ID_INSUMO" />
+          <ScalarProperty Name="ID_ESTRUTURA" ColumnName="ID_ESTRUTURA" />
+          <ScalarProperty Name="ID_TIPO_PRODUTO" ColumnName="ID_TIPO_PRODUTO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_GRUPO_PRODUTO">
+      <EntityTypeMapping TypeName="SQLServerModel.TB_GRUPO_PRODUTO">
+        <MappingFragment StoreEntitySet="TB_GRUPO_PRODUTO">
+          <ScalarProperty Name="DS_GRUPO_PRODUTO" ColumnName="DS_GRUPO_PRODUTO" />
+          <ScalarProperty Name="CD_GRUPO_PRODUTO" ColumnName="CD_GRUPO_PRODUTO" />
+          <ScalarProperty Name="ID_GRUPO_PRODUTO" ColumnName="ID_GRUPO_PRODUTO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_LOG_ITEM">
+      <EntityTypeMapping TypeName="SQLServerModel.TB_LOG_ITEM">
+        <MappingFragment StoreEntitySet="TB_LOG_ITEM">
+          <ScalarProperty Name="MENSAGEM" ColumnName="MENSAGEM" />
+          <ScalarProperty Name="DS_PROCESSO" ColumnName="DS_PROCESSO" />
+          <ScalarProperty Name="ID_LOG_MASTER" ColumnName="ID_LOG_MASTER" />
+          <ScalarProperty Name="ID_LOG_ITEM" ColumnName="ID_LOG_ITEM" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_LOG_MASTER">
+      <EntityTypeMapping TypeName="SQLServerModel.TB_LOG_MASTER">
+        <MappingFragment StoreEntitySet="TB_LOG_MASTER">
+          <ScalarProperty Name="MENSAGEM" ColumnName="MENSAGEM" />
+          <ScalarProperty Name="DT_FIM_EXEC" ColumnName="DT_FIM_EXEC" />
+          <ScalarProperty Name="DT_INICIO_EXEC" ColumnName="DT_INICIO_EXEC" />
+          <ScalarProperty Name="ID_LOG_MASTER" ColumnName="ID_LOG_MASTER" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_PREVISAO_CONSUMO_PRODUCAO">
+      <EntityTypeMapping TypeName="SQLServerModel.TB_PREVISAO_CONSUMO_PRODUCAO">
+        <MappingFragment StoreEntitySet="TB_PREVISAO_CONSUMO_PRODUCAO">
+          <ScalarProperty Name="QT_PREVISAO_DIA" ColumnName="QT_PREVISAO_DIA" />
+          <ScalarProperty Name="ID_INSUMO" ColumnName="ID_INSUMO" />
+          <ScalarProperty Name="ID_PROGRAMACAO" ColumnName="ID_PROGRAMACAO" />
+          <ScalarProperty Name="ID_PREVISAO" ColumnName="ID_PREVISAO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_PRODUTO">
+      <EntityTypeMapping TypeName="SQLServerModel.TB_PRODUTO">
+        <MappingFragment StoreEntitySet="TB_PRODUTO">
+          <ScalarProperty Name="CD_SAP" ColumnName="CD_SAP" />
+          <ScalarProperty Name="ID_SUBGRUPO_PRODUTO" ColumnName="ID_SUBGRUPO_PRODUTO" />
+          <ScalarProperty Name="ID_GRUPO_PRODUTO" ColumnName="ID_GRUPO_PRODUTO" />
+          <ScalarProperty Name="DS_PRODUTO" ColumnName="DS_PRODUTO" />
+          <ScalarProperty Name="CD_PRODUTO" ColumnName="CD_PRODUTO" />
+          <ScalarProperty Name="ID_PRODUTO" ColumnName="ID_PRODUTO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_PRODUTO_COMPATIVEL">
+      <EntityTypeMapping TypeName="SQLServerModel.TB_PRODUTO_COMPATIVEL">
+        <MappingFragment StoreEntitySet="TB_PRODUTO_COMPATIVEL">
+          <ScalarProperty Name="ID_PRODUTO_COMPATIVEL" ColumnName="ID_PRODUTO_COMPATIVEL" />
+          <ScalarProperty Name="ID_GRUPO_PRODUTO" ColumnName="ID_GRUPO_PRODUTO" />
+          <ScalarProperty Name="ID_PRODUTO" ColumnName="ID_PRODUTO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_PROGRAMACAO_PRODUCAO">
+      <EntityTypeMapping TypeName="SQLServerModel.TB_PROGRAMACAO_PRODUCAO">
+        <MappingFragment StoreEntitySet="TB_PROGRAMACAO_PRODUCAO">
+          <ScalarProperty Name="FL_ABERTO" ColumnName="FL_ABERTO" />
+          <ScalarProperty Name="QT_DIAS_PREVISAO_PRODUCAO" ColumnName="QT_DIAS_PREVISAO_PRODUCAO" />
+          <ScalarProperty Name="DT_VIGENCIA_FINAL" ColumnName="DT_VIGENCIA_FINAL" />
+          <ScalarProperty Name="DT_VIGENCIA_INICIAL" ColumnName="DT_VIGENCIA_INICIAL" />
+          <ScalarProperty Name="DS_PROGRAMACAO" ColumnName="DS_PROGRAMACAO" />
+          <ScalarProperty Name="ID_PROGRAMACAO" ColumnName="ID_PROGRAMACAO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_PROGRAMACAO_RECEBIMENTO">
+      <EntityTypeMapping TypeName="SQLServerModel.TB_PROGRAMACAO_RECEBIMENTO">
+        <MappingFragment StoreEntitySet="TB_PROGRAMACAO_RECEBIMENTO">
+          <ScalarProperty Name="ID_DEPOSITO" ColumnName="ID_DEPOSITO" />
+          <ScalarProperty Name="NR_PEDIDO_COMPRA" ColumnName="NR_PEDIDO_COMPRA" />
+          <ScalarProperty Name="DT_PREVISAO_RECEBIMENTO" ColumnName="DT_PREVISAO_RECEBIMENTO" />
+          <ScalarProperty Name="QT_PROGRAMACAO" ColumnName="QT_PROGRAMACAO" />
+          <ScalarProperty Name="CD_SAP" ColumnName="CD_SAP" />
+          <ScalarProperty Name="ID_PROGRAMACAO" ColumnName="ID_PROGRAMACAO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_REL_ACOMPANHAMENTO_PRODUCAO">
+      <EntityTypeMapping TypeName="SQLServerModel.TB_REL_ACOMPANHAMENTO_PRODUCAO">
+        <MappingFragment StoreEntitySet="TB_REL_ACOMPANHAMENTO_PRODUCAO">
+          <ScalarProperty Name="QT_PRODUCAO" ColumnName="QT_PRODUCAO" />
+          <ScalarProperty Name="ID_AGRUPAMENTO" ColumnName="ID_AGRUPAMENTO" />
+          <ScalarProperty Name="DT_RESUMO" ColumnName="DT_RESUMO" />
+          <ScalarProperty Name="ID_RESUMO" ColumnName="ID_RESUMO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_REL_CADEIA_SUPRIMENTOS">
+      <EntityTypeMapping TypeName="SQLServerModel.TB_REL_CADEIA_SUPRIMENTOS">
+        <MappingFragment StoreEntitySet="TB_REL_CADEIA_SUPRIMENTOS">
+          <ScalarProperty Name="QT_PRODUTO_RPT_GARANTIA" ColumnName="QT_PRODUTO_RPT_GARANTIA" />
+          <ScalarProperty Name="QT_PRODUTO_TEC_DESCONTINUADA" ColumnName="QT_PRODUTO_TEC_DESCONTINUADA" />
+          <ScalarProperty Name="QT_PRODUTO_RPT_REPARO" ColumnName="QT_PRODUTO_RPT_REPARO" />
+          <ScalarProperty Name="QT_PRODUTO_RPT_TRIAGEM" ColumnName="QT_PRODUTO_RPT_TRIAGEM" />
+          <ScalarProperty Name="QT_PRODUTO_NPA" ColumnName="QT_PRODUTO_NPA" />
+          <ScalarProperty Name="QT_PRODUTO_RPA" ColumnName="QT_PRODUTO_RPA" />
+          <ScalarProperty Name="QT_PRODUTO_SUCATA" ColumnName="QT_PRODUTO_SUCATA" />
+          <ScalarProperty Name="DT_RESUMO" ColumnName="DT_RESUMO" />
+          <ScalarProperty Name="ID_PRODUTO_RPT_GARANTIA" ColumnName="ID_PRODUTO_RPT_GARANTIA" />
+          <ScalarProperty Name="ID_PRODUTO_TEC_DESCONTINUADA" ColumnName="ID_PRODUTO_TEC_DESCONTINUADA" />
+          <ScalarProperty Name="ID_PRODUTO_RPT_REPARO" ColumnName="ID_PRODUTO_RPT_REPARO" />
+          <ScalarProperty Name="ID_PRODUTO_RPT_TRIAGEM" ColumnName="ID_PRODUTO_RPT_TRIAGEM" />
+          <ScalarProperty Name="ID_PRODUTO_NPA" ColumnName="ID_PRODUTO_NPA" />
+          <ScalarProperty Name="ID_PRODUTO_RPA" ColumnName="ID_PRODUTO_RPA" />
+          <ScalarProperty Name="ID_PRODUTO_SUCATA" ColumnName="ID_PRODUTO_SUCATA" />
+          <ScalarProperty Name="ID_DEPOSITO_CD" ColumnName="ID_DEPOSITO_CD" />
+          <ScalarProperty Name="ID_RELATORIO" ColumnName="ID_RELATORIO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_REL_ENTRADA_INSUMOS">
+      <EntityTypeMapping TypeName="SQLServerModel.TB_REL_ENTRADA_INSUMOS">
+        <MappingFragment StoreEntitySet="TB_REL_ENTRADA_INSUMOS">
+          <ScalarProperty Name="ID_LOTE" ColumnName="ID_LOTE" />
+          <ScalarProperty Name="QT_PRODUTO" ColumnName="QT_PRODUTO" />
+          <ScalarProperty Name="ID_PRODUTO" ColumnName="ID_PRODUTO" />
+          <ScalarProperty Name="DT_RESUMO" ColumnName="DT_RESUMO" />
+          <ScalarProperty Name="ID_RESUMO" ColumnName="ID_RESUMO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_REL_GERAL_CADEIA_SUPRIMENTOS">
+      <EntityTypeMapping TypeName="SQLServerModel.TB_REL_GERAL_CADEIA_SUPRIMENTOS">
+        <MappingFragment StoreEntitySet="TB_REL_GERAL_CADEIA_SUPRIMENTOS">
+          <ScalarProperty Name="QT_EMREC_RPT_REPARO" ColumnName="QT_EMREC_RPT_REPARO" />
+          <ScalarProperty Name="QT_NECESSIDADE_COMPRA" ColumnName="QT_NECESSIDADE_COMPRA" />
+          <ScalarProperty Name="QT_NECESSIDADE_REPARO" ColumnName="QT_NECESSIDADE_REPARO" />
+          <ScalarProperty Name="QT_NECESSIDADE_TRIAGEM" ColumnName="QT_NECESSIDADE_TRIAGEM" />
+          <ScalarProperty Name="QT_NECESSIDADE_SUPRIMENTOS" ColumnName="QT_NECESSIDADE_SUPRIMENTOS" />
+          <ScalarProperty Name="QT_TOTAL_RPT_GARANTIA" ColumnName="QT_TOTAL_RPT_GARANTIA" />
+          <ScalarProperty Name="QT_TOTAL_RPT_TRIAGEM" ColumnName="QT_TOTAL_RPT_TRIAGEM" />
+          <ScalarProperty Name="QT_TOTAL_RPA" ColumnName="QT_TOTAL_RPA" />
+          <ScalarProperty Name="QT_TOTAL_NPA" ColumnName="QT_TOTAL_NPA" />
+          <ScalarProperty Name="QT_GERAL_ENTREGA" ColumnName="QT_GERAL_ENTREGA" />
+          <ScalarProperty Name="DT_PROXIMA_ENTREGA" ColumnName="DT_PROXIMA_ENTREGA" />
+          <ScalarProperty Name="QT_PROXIMA_ENTREGA" ColumnName="QT_PROXIMA_ENTREGA" />
+          <ScalarProperty Name="QT_SALDO_LABORATORIO" ColumnName="QT_SALDO_LABORATORIO" />
+          <ScalarProperty Name="QT_SALDO_FORNECEDOR" ColumnName="QT_SALDO_FORNECEDOR" />
+          <ScalarProperty Name="QT_EMREC_SUCATA" ColumnName="QT_EMREC_SUCATA" />
+          <ScalarProperty Name="QT_EMREC_DESCONTINUADO" ColumnName="QT_EMREC_DESCONTINUADO" />
+          <ScalarProperty Name="QT_EMREC_RPT_TRIAGEM" ColumnName="QT_EMREC_RPT_TRIAGEM" />
+          <ScalarProperty Name="QT_EMREC_RPA" ColumnName="QT_EMREC_RPA" />
+          <ScalarProperty Name="QT_EMREC_NPA" ColumnName="QT_EMREC_NPA" />
+          <ScalarProperty Name="QT_DIAS_COBERTURA" ColumnName="QT_DIAS_COBERTURA" />
+          <ScalarProperty Name="QT_CONSUMO_DIA" ColumnName="QT_CONSUMO_DIA" />
+          <ScalarProperty Name="QT_SALDO_WIP" ColumnName="QT_SALDO_WIP" />
+          <ScalarProperty Name="ID_PRODUTO_SUCATA" ColumnName="ID_PRODUTO_SUCATA" />
+          <ScalarProperty Name="ID_PRODUTO_RPT_GARANTIA" ColumnName="ID_PRODUTO_RPT_GARANTIA" />
+          <ScalarProperty Name="ID_PRODUTO_TEC_DESCONTINUADA" ColumnName="ID_PRODUTO_TEC_DESCONTINUADA" />
+          <ScalarProperty Name="ID_PRODUTO_RPT_REPARO" ColumnName="ID_PRODUTO_RPT_REPARO" />
+          <ScalarProperty Name="ID_PRODUTO_RPT_TRIAGEM" ColumnName="ID_PRODUTO_RPT_TRIAGEM" />
+          <ScalarProperty Name="ID_PRODUTO_RPA" ColumnName="ID_PRODUTO_RPA" />
+          <ScalarProperty Name="ID_PRODUTO_NPA" ColumnName="ID_PRODUTO_NPA" />
+          <ScalarProperty Name="DT_RESUMO" ColumnName="DT_RESUMO" />
+          <ScalarProperty Name="ID_RESUMO" ColumnName="ID_RESUMO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_REL_GERENCIAL">
+      <EntityTypeMapping TypeName="SQLServerModel.TB_REL_GERENCIAL">
+        <MappingFragment StoreEntitySet="TB_REL_GERENCIAL">
+          <ScalarProperty Name="QT_SALDO_PRODUTIVO" ColumnName="QT_SALDO_PRODUTIVO" />
+          <ScalarProperty Name="QT_DIAS_CONSUMO" ColumnName="QT_DIAS_CONSUMO" />
+          <ScalarProperty Name="QT_CONSUMO_DIARIO" ColumnName="QT_CONSUMO_DIARIO" />
+          <ScalarProperty Name="QT_ESTOQUE_SUCATA" ColumnName="QT_ESTOQUE_SUCATA" />
+          <ScalarProperty Name="QT_ESTOQUE_RPT_GARANTIA" ColumnName="QT_ESTOQUE_RPT_GARANTIA" />
+          <ScalarProperty Name="QT_ESTOQUE_TEC_DESCONTINUADA" ColumnName="QT_ESTOQUE_TEC_DESCONTINUADA" />
+          <ScalarProperty Name="QT_ESTOQUE_RPT_REPARO" ColumnName="QT_ESTOQUE_RPT_REPARO" />
+          <ScalarProperty Name="QT_ESTOQUE_TRIAGEM" ColumnName="QT_ESTOQUE_TRIAGEM" />
+          <ScalarProperty Name="QT_ESTOQUE_RPA" ColumnName="QT_ESTOQUE_RPA" />
+          <ScalarProperty Name="QT_ESTOQUE_NPA" ColumnName="QT_ESTOQUE_NPA" />
+          <ScalarProperty Name="ID_PRODUTO_SUCATA" ColumnName="ID_PRODUTO_SUCATA" />
+          <ScalarProperty Name="ID_PRODUTO_RPT_GARANTIA" ColumnName="ID_PRODUTO_RPT_GARANTIA" />
+          <ScalarProperty Name="ID_PRODUTO_TEC_DESCONTINUADA" ColumnName="ID_PRODUTO_TEC_DESCONTINUADA" />
+          <ScalarProperty Name="ID_PRODUTO_RPT_REPARO" ColumnName="ID_PRODUTO_RPT_REPARO" />
+          <ScalarProperty Name="ID_PRODUTO_RPT_TRIAGEM" ColumnName="ID_PRODUTO_RPT_TRIAGEM" />
+          <ScalarProperty Name="ID_PRODUTO_RPA" ColumnName="ID_PRODUTO_RPA" />
+          <ScalarProperty Name="ID_PRODUTO_NPA" ColumnName="ID_PRODUTO_NPA" />
+          <ScalarProperty Name="DT_RELATORIO" ColumnName="DT_RELATORIO" />
+          <ScalarProperty Name="ID_RELATORIO" ColumnName="ID_RELATORIO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_REL_MOV_FORNEC_EXTERNO">
+      <EntityTypeMapping TypeName="SQLServerModel.TB_REL_MOV_FORNEC_EXTERNO">
+        <MappingFragment StoreEntitySet="TB_REL_MOV_FORNEC_EXTERNO">
+          <ScalarProperty Name="ID_LOTE" ColumnName="ID_LOTE" />
+          <ScalarProperty Name="QT_PRODUTO" ColumnName="QT_PRODUTO" />
+          <ScalarProperty Name="TP_MOVIMENTO" ColumnName="TP_MOVIMENTO" />
+          <ScalarProperty Name="ID_PRODUTO" ColumnName="ID_PRODUTO" />
+          <ScalarProperty Name="DT_RESUMO" ColumnName="DT_RESUMO" />
+          <ScalarProperty Name="ID_RESUMO" ColumnName="ID_RESUMO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_REL_PC_UTILIZACAO">
+      <EntityTypeMapping TypeName="SQLServerModel.TB_REL_PC_UTILIZACAO">
+        <MappingFragment StoreEntitySet="TB_REL_PC_UTILIZACAO">
+          <ScalarProperty Name="QT_PRODUTO" ColumnName="QT_PRODUTO" />
+          <ScalarProperty Name="CODIGO_SAP" ColumnName="CODIGO_SAP" />
+          <ScalarProperty Name="DS_PRODUTO" ColumnName="DS_PRODUTO" />
+          <ScalarProperty Name="ID_PRODUTO" ColumnName="ID_PRODUTO" />
+          <ScalarProperty Name="DS_GRUPO" ColumnName="DS_GRUPO" />
+          <ScalarProperty Name="ID_GRUPO" ColumnName="ID_GRUPO" />
+          <ScalarProperty Name="DT_MOVIMENTO" ColumnName="DT_MOVIMENTO" />
+          <ScalarProperty Name="ID_REL_PC_UTILIZACAO" ColumnName="ID_REL_PC_UTILIZACAO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_REL_RPT_GARANTIA">
+      <EntityTypeMapping TypeName="SQLServerModel.TB_REL_RPT_GARANTIA">
+        <MappingFragment StoreEntitySet="TB_REL_RPT_GARANTIA">
+          <ScalarProperty Name="ID_LOTE" ColumnName="ID_LOTE" />
+          <ScalarProperty Name="QT_PRODUTO" ColumnName="QT_PRODUTO" />
+          <ScalarProperty Name="TP_MOVIMENTO" ColumnName="TP_MOVIMENTO" />
+          <ScalarProperty Name="ID_PRODUTO" ColumnName="ID_PRODUTO" />
+          <ScalarProperty Name="DT_RESUMO" ColumnName="DT_RESUMO" />
+          <ScalarProperty Name="ID_RESUMO" ColumnName="ID_RESUMO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_REL_SAIDA_INSUMOS">
+      <EntityTypeMapping TypeName="SQLServerModel.TB_REL_SAIDA_INSUMOS">
+        <MappingFragment StoreEntitySet="TB_REL_SAIDA_INSUMOS">
+          <ScalarProperty Name="ID_LOTE" ColumnName="ID_LOTE" />
+          <ScalarProperty Name="QT_PRODUTO" ColumnName="QT_PRODUTO" />
+          <ScalarProperty Name="ID_PRODUTO" ColumnName="ID_PRODUTO" />
+          <ScalarProperty Name="ID_DEPOSITO_CD" ColumnName="ID_DEPOSITO_CD" />
+          <ScalarProperty Name="DT_RESUMO" ColumnName="DT_RESUMO" />
+          <ScalarProperty Name="ID_RESUMO" ColumnName="ID_RESUMO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_REL_SAIDA_PRODUCAO">
+      <EntityTypeMapping TypeName="SQLServerModel.TB_REL_SAIDA_PRODUCAO">
+        <MappingFragment StoreEntitySet="TB_REL_SAIDA_PRODUCAO">
+          <ScalarProperty Name="QT_PRODUTO" ColumnName="QT_PRODUTO" />
+          <ScalarProperty Name="ID_PRODUTO" ColumnName="ID_PRODUTO" />
+          <ScalarProperty Name="ID_DEPOSITO_CD" ColumnName="ID_DEPOSITO_CD" />
+          <ScalarProperty Name="DT_RESUMO" ColumnName="DT_RESUMO" />
+          <ScalarProperty Name="ID_RESUMO" ColumnName="ID_RESUMO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_SALDO_ESTOQUE">
+      <EntityTypeMapping TypeName="SQLServerModel.TB_SALDO_ESTOQUE">
+        <MappingFragment StoreEntitySet="TB_SALDO_ESTOQUE">
+          <ScalarProperty Name="ID_LOCAL_ESTOQUE" ColumnName="ID_LOCAL_ESTOQUE" />
+          <ScalarProperty Name="QT_PRODUTO" ColumnName="QT_PRODUTO" />
+          <ScalarProperty Name="ID_PRODUTO" ColumnName="ID_PRODUTO" />
+          <ScalarProperty Name="ID_DEPOSITO" ColumnName="ID_DEPOSITO" />
+          <ScalarProperty Name="DT_SALDO_ESTOQUE" ColumnName="DT_SALDO_ESTOQUE" />
+          <ScalarProperty Name="ID_SALDO_ESTOQUE" ColumnName="ID_SALDO_ESTOQUE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_SALDO_ETAPA_PROCESSO">
+      <EntityTypeMapping TypeName="SQLServerModel.TB_SALDO_ETAPA_PROCESSO">
+        <MappingFragment StoreEntitySet="TB_SALDO_ETAPA_PROCESSO">
+          <ScalarProperty Name="QT_ITENS" ColumnName="QT_ITENS" />
+          <ScalarProperty Name="DS_STATUS_CAIXA" ColumnName="DS_STATUS_CAIXA" />
+          <ScalarProperty Name="ID_STATUS_CAIXA" ColumnName="ID_STATUS_CAIXA" />
+          <ScalarProperty Name="DS_PROCESSO" ColumnName="DS_PROCESSO" />
+          <ScalarProperty Name="ID_PROCESSO" ColumnName="ID_PROCESSO" />
+          <ScalarProperty Name="DS_GRUPO" ColumnName="DS_GRUPO" />
+          <ScalarProperty Name="ID_GRUPO" ColumnName="ID_GRUPO" />
+          <ScalarProperty Name="CODIGO_SAP" ColumnName="CODIGO_SAP" />
+          <ScalarProperty Name="DS_PRODUTO" ColumnName="DS_PRODUTO" />
+          <ScalarProperty Name="ID_PRODUTO" ColumnName="ID_PRODUTO" />
+          <ScalarProperty Name="DS_LOCAL_ESTOQUE" ColumnName="DS_LOCAL_ESTOQUE" />
+          <ScalarProperty Name="ID_LOCAL_ESTOQUE" ColumnName="ID_LOCAL_ESTOQUE" />
+          <ScalarProperty Name="DS_DEPOSITO" ColumnName="DS_DEPOSITO" />
+          <ScalarProperty Name="ID_DEPOSITO" ColumnName="ID_DEPOSITO" />
+          <ScalarProperty Name="DT_RELATORIO" ColumnName="DT_RELATORIO" />
+          <ScalarProperty Name="ID_SALDO_ETAPA_PROCESSO" ColumnName="ID_SALDO_ETAPA_PROCESSO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_SEMAFORO_COBERTURA_ESTOQUE">
+      <EntityTypeMapping TypeName="SQLServerModel.TB_SEMAFORO_COBERTURA_ESTOQUE">
+        <MappingFragment StoreEntitySet="TB_SEMAFORO_COBERTURA_ESTOQUE">
+          <ScalarProperty Name="QT_ESTOQUE_IDEAL" ColumnName="QT_ESTOQUE_IDEAL" />
+          <ScalarProperty Name="QT_ESTOQUE_ALERTA" ColumnName="QT_ESTOQUE_ALERTA" />
+          <ScalarProperty Name="QT_ESTOQUE_BAIXO" ColumnName="QT_ESTOQUE_BAIXO" />
+          <ScalarProperty Name="ID_SUBGRUPO_PRODUTO" ColumnName="ID_SUBGRUPO_PRODUTO" />
+          <ScalarProperty Name="ID_SEMAFORO" ColumnName="ID_SEMAFORO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_SITUACAO_PRODUTO">
+      <EntityTypeMapping TypeName="SQLServerModel.TB_SITUACAO_PRODUTO">
+        <MappingFragment StoreEntitySet="TB_SITUACAO_PRODUTO">
+          <ScalarProperty Name="PC_RECUPERACAO_TRIAGEM" ColumnName="PC_RECUPERACAO_TRIAGEM" />
+          <ScalarProperty Name="FL_CALCULO_AUTOMATICO_TRIAGEM" ColumnName="FL_CALCULO_AUTOMATICO_TRIAGEM" />
+          <ScalarProperty Name="FL_ATIVO" ColumnName="FL_ATIVO" />
+          <ScalarProperty Name="ID_PRODUTO" ColumnName="ID_PRODUTO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_SUBGRUPO_PRODUTO">
+      <EntityTypeMapping TypeName="SQLServerModel.TB_SUBGRUPO_PRODUTO">
+        <MappingFragment StoreEntitySet="TB_SUBGRUPO_PRODUTO">
+          <ScalarProperty Name="DS_SUBGRUPO_PRODUTO" ColumnName="DS_SUBGRUPO_PRODUTO" />
+          <ScalarProperty Name="CD_SUBGRUPO_PRODUTO" ColumnName="CD_SUBGRUPO_PRODUTO" />
+          <ScalarProperty Name="ID_SUBGRUPO_PRODUTO" ColumnName="ID_SUBGRUPO_PRODUTO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_TIPO_PRODUTO">
+      <EntityTypeMapping TypeName="SQLServerModel.TB_TIPO_PRODUTO">
+        <MappingFragment StoreEntitySet="TB_TIPO_PRODUTO">
+          <ScalarProperty Name="DS_USUARIO" ColumnName="DS_USUARIO" />
+          <ScalarProperty Name="DT_VIGENCIA_FINAL" ColumnName="DT_VIGENCIA_FINAL" />
+          <ScalarProperty Name="DT_VIGENCIA_INICIAL" ColumnName="DT_VIGENCIA_INICIAL" />
+          <ScalarProperty Name="NR_VERSAO" ColumnName="NR_VERSAO" />
+          <ScalarProperty Name="ID_PRODUTO" ColumnName="ID_PRODUTO" />
+          <ScalarProperty Name="DS_TIPO_PRODUTO" ColumnName="DS_TIPO_PRODUTO" />
+          <ScalarProperty Name="ID_TIPO_PRODUTO" ColumnName="ID_TIPO_PRODUTO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

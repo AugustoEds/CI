@@ -1,0 +1,234 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="FirebirdModelStoreContainer" CdmEntityContainer="FirebirdEntities">
+    <EntitySetMapping Name="ESCADDEP">
+      <EntityTypeMapping TypeName="FirebirdModel.ESCADDEP">
+        <MappingFragment StoreEntitySet="ESCADDEP">
+          <ScalarProperty Name="CODIGO" ColumnName="CODIGO" />
+          <ScalarProperty Name="DESCRICAO" ColumnName="DESCRICAO" />
+          <ScalarProperty Name="TIPO_DEP" ColumnName="TIPO_DEP" />
+          <ScalarProperty Name="FORNECEDOR" ColumnName="FORNECEDOR" />
+          <ScalarProperty Name="CLIENTE" ColumnName="CLIENTE" />
+          <ScalarProperty Name="DATA_CAD" ColumnName="DATA_CAD" />
+          <ScalarProperty Name="DATA_ALT" ColumnName="DATA_ALT" />
+          <ScalarProperty Name="CLASSIFICACAO_DEP" ColumnName="CLASSIFICACAO_DEP" />
+          <ScalarProperty Name="CODIGO_CLASSIFICACAO" ColumnName="CODIGO_CLASSIFICACAO" />
+          <ScalarProperty Name="FORNCEDOR_NF" ColumnName="FORNCEDOR_NF" />
+          <ScalarProperty Name="FORNECEDOR_NF" ColumnName="FORNECEDOR_NF" />
+          <ScalarProperty Name="FLAG_PORTAL_LAB" ColumnName="FLAG_PORTAL_LAB" />
+          <ScalarProperty Name="CONTROLAESTOQUE" ColumnName="CONTROLAESTOQUE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ESCADPRO">
+      <EntityTypeMapping TypeName="FirebirdModel.ESCADPRO">
+        <MappingFragment StoreEntitySet="ESCADPRO">
+          <ScalarProperty Name="CODIGO" ColumnName="CODIGO" />
+          <ScalarProperty Name="DESCRICAO" ColumnName="DESCRICAO" />
+          <ScalarProperty Name="NUM_DESENHO" ColumnName="NUM_DESENHO" />
+          <ScalarProperty Name="DATA_DESENHO" ColumnName="DATA_DESENHO" />
+          <ScalarProperty Name="GRUPO" ColumnName="GRUPO" />
+          <ScalarProperty Name="SUB_GRUPO" ColumnName="SUB_GRUPO" />
+          <ScalarProperty Name="TIPO" ColumnName="TIPO" />
+          <ScalarProperty Name="COD_ESTRUTURA" ColumnName="COD_ESTRUTURA" />
+          <ScalarProperty Name="UNIDADE" ColumnName="UNIDADE" />
+          <ScalarProperty Name="PESO_LIQUIDO" ColumnName="PESO_LIQUIDO" />
+          <ScalarProperty Name="SITUACAO" ColumnName="SITUACAO" />
+          <ScalarProperty Name="ESTOQUE_MAXIMO" ColumnName="ESTOQUE_MAXIMO" />
+          <ScalarProperty Name="ESTOQUE_MINIMO" ColumnName="ESTOQUE_MINIMO" />
+          <ScalarProperty Name="CLASSIFICACAO_FISCAL" ColumnName="CLASSIFICACAO_FISCAL" />
+          <ScalarProperty Name="ALIQUOTA_IPI" ColumnName="ALIQUOTA_IPI" />
+          <ScalarProperty Name="FLAG_RED_ICMS" ColumnName="FLAG_RED_ICMS" />
+          <ScalarProperty Name="DATA_CAD" ColumnName="DATA_CAD" />
+          <ScalarProperty Name="DATA_ALT" ColumnName="DATA_ALT" />
+          <ScalarProperty Name="ULT_MOV" ColumnName="ULT_MOV" />
+          <ScalarProperty Name="FLAG_VALORIZA" ColumnName="FLAG_VALORIZA" />
+          <ScalarProperty Name="SITUACAO_INV" ColumnName="SITUACAO_INV" />
+          <ScalarProperty Name="FLAG_CRED_ICMS" ColumnName="FLAG_CRED_ICMS" />
+          <ScalarProperty Name="FLAG_CRED_IPI" ColumnName="FLAG_CRED_IPI" />
+          <ScalarProperty Name="ORIGEM" ColumnName="ORIGEM" />
+          <ScalarProperty Name="COD_ALTERNATIVO" ColumnName="COD_ALTERNATIVO" />
+          <ScalarProperty Name="PRECO_PECA" ColumnName="PRECO_PECA" />
+          <ScalarProperty Name="PRECO_VENDA" ColumnName="PRECO_VENDA" />
+          <ScalarProperty Name="MARGEM_LUCRO" ColumnName="MARGEM_LUCRO" />
+          <ScalarProperty Name="CUSTO_UNITARIO" ColumnName="CUSTO_UNITARIO" />
+          <ScalarProperty Name="VERSAO_ATUAL" ColumnName="VERSAO_ATUAL" />
+          <ScalarProperty Name="UTILIZA_LOTE" ColumnName="UTILIZA_LOTE" />
+          <ScalarProperty Name="SOL_LOTE_FORN" ColumnName="SOL_LOTE_FORN" />
+          <ScalarProperty Name="METODO_LOTE" ColumnName="METODO_LOTE" />
+          <ScalarProperty Name="CHAVE_METODO" ColumnName="CHAVE_METODO" />
+          <ScalarProperty Name="DEF_LOTE_ENT" ColumnName="DEF_LOTE_ENT" />
+          <ScalarProperty Name="NUM_LOTE_ENT" ColumnName="NUM_LOTE_ENT" />
+          <ScalarProperty Name="DEF_LOTE_INV" ColumnName="DEF_LOTE_INV" />
+          <ScalarProperty Name="NUM_LOTE_INV" ColumnName="NUM_LOTE_INV" />
+          <ScalarProperty Name="SITUACAO_LOTE" ColumnName="SITUACAO_LOTE" />
+          <ScalarProperty Name="QTDE_CAIXA" ColumnName="QTDE_CAIXA" />
+          <ScalarProperty Name="QTDE_PALLET" ColumnName="QTDE_PALLET" />
+          <ScalarProperty Name="REDUZIDO" ColumnName="REDUZIDO" />
+          <ScalarProperty Name="DESCRICAO_FAT" ColumnName="DESCRICAO_FAT" />
+          <ScalarProperty Name="CLASSIFICACAO_ITEM" ColumnName="CLASSIFICACAO_ITEM" />
+          <ScalarProperty Name="GRAMATURA" ColumnName="GRAMATURA" />
+          <ScalarProperty Name="TIPO_ONDA" ColumnName="TIPO_ONDA" />
+          <ScalarProperty Name="TEMPO_PREP" ColumnName="TEMPO_PREP" />
+          <ScalarProperty Name="TEMPO_OPER" ColumnName="TEMPO_OPER" />
+          <ScalarProperty Name="TEMPO_MAQ" ColumnName="TEMPO_MAQ" />
+          <ScalarProperty Name="TEMPO_FABR" ColumnName="TEMPO_FABR" />
+          <ScalarProperty Name="QTDE_BASE" ColumnName="QTDE_BASE" />
+          <ScalarProperty Name="DIAGONAL_MENOR" ColumnName="DIAGONAL_MENOR" />
+          <ScalarProperty Name="DIAGONAL_MAIOR" ColumnName="DIAGONAL_MAIOR" />
+          <ScalarProperty Name="ESPESSURA" ColumnName="ESPESSURA" />
+          <ScalarProperty Name="CORDAO" ColumnName="CORDAO" />
+          <ScalarProperty Name="FLAG_CRED_PIS" ColumnName="FLAG_CRED_PIS" />
+          <ScalarProperty Name="FLAG_CRED_COFINS" ColumnName="FLAG_CRED_COFINS" />
+          <ScalarProperty Name="TOLER_MENOR" ColumnName="TOLER_MENOR" />
+          <ScalarProperty Name="TOLER_MAIOR" ColumnName="TOLER_MAIOR" />
+          <ScalarProperty Name="SENHA_CAD" ColumnName="SENHA_CAD" />
+          <ScalarProperty Name="SENHA_ALT" ColumnName="SENHA_ALT" />
+          <ScalarProperty Name="ANALISE_FIS_QUI" ColumnName="ANALISE_FIS_QUI" />
+          <ScalarProperty Name="ANALISE_MICROBI" ColumnName="ANALISE_MICROBI" />
+          <ScalarProperty Name="CODIGO_EAN_UCC" ColumnName="CODIGO_EAN_UCC" />
+          <ScalarProperty Name="QTDE_FRACIONADA" ColumnName="QTDE_FRACIONADA" />
+          <ScalarProperty Name="FLAG_DESTAQUE_IPI" ColumnName="FLAG_DESTAQUE_IPI" />
+          <ScalarProperty Name="PADRAO_LOTE" ColumnName="PADRAO_LOTE" />
+          <ScalarProperty Name="FLAG_VERSAO" ColumnName="FLAG_VERSAO" />
+          <ScalarProperty Name="FLAG_FICHA" ColumnName="FLAG_FICHA" />
+          <ScalarProperty Name="EMBALAGEM_PADRAO" ColumnName="EMBALAGEM_PADRAO" />
+          <ScalarProperty Name="EXCECAO_NCM" ColumnName="EXCECAO_NCM" />
+          <ScalarProperty Name="GENERO" ColumnName="GENERO" />
+          <ScalarProperty Name="COD_SERVICO" ColumnName="COD_SERVICO" />
+          <ScalarProperty Name="ALIQUOTA_ISS" ColumnName="ALIQUOTA_ISS" />
+          <ScalarProperty Name="ULT_RG_VISANET_RFI" ColumnName="ULT_RG_VISANET_RFI" />
+          <ScalarProperty Name="ULT_RG_VISANET_LEG" ColumnName="ULT_RG_VISANET_LEG" />
+          <ScalarProperty Name="ULT_VISANET_PROV" ColumnName="ULT_VISANET_PROV" />
+          <ScalarProperty Name="FABRICANTE" ColumnName="FABRICANTE" />
+          <ScalarProperty Name="SUCATA" ColumnName="SUCATA" />
+          <ScalarProperty Name="NPA" ColumnName="NPA" />
+          <ScalarProperty Name="RPA" ColumnName="RPA" />
+          <ScalarProperty Name="RPT_TRIAGEM" ColumnName="RPT_TRIAGEM" />
+          <ScalarProperty Name="RPT_REPARO" ColumnName="RPT_REPARO" />
+          <ScalarProperty Name="TECN_DESCONTIN" ColumnName="TECN_DESCONTIN" />
+          <ScalarProperty Name="CAPACIDADE_VOLUME" ColumnName="CAPACIDADE_VOLUME" />
+          <ScalarProperty Name="CODIGO_SAP" ColumnName="CODIGO_SAP" />
+          <ScalarProperty Name="RPT_GARANTIA" ColumnName="RPT_GARANTIA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ESGRUPRO">
+      <EntityTypeMapping TypeName="FirebirdModel.ESGRUPRO">
+        <MappingFragment StoreEntitySet="ESGRUPRO">
+          <ScalarProperty Name="CODIGO" ColumnName="CODIGO" />
+          <ScalarProperty Name="DESCRICAO" ColumnName="DESCRICAO" />
+          <ScalarProperty Name="DATA_CAD" ColumnName="DATA_CAD" />
+          <ScalarProperty Name="DATA_ALT" ColumnName="DATA_ALT" />
+          <ScalarProperty Name="COD_ESTAB" ColumnName="COD_ESTAB" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ESSUBPRO">
+      <EntityTypeMapping TypeName="FirebirdModel.ESSUBPRO">
+        <MappingFragment StoreEntitySet="ESSUBPRO">
+          <ScalarProperty Name="CODIGO" ColumnName="CODIGO" />
+          <ScalarProperty Name="DESCRICAO" ColumnName="DESCRICAO" />
+          <ScalarProperty Name="DATA_CAD" ColumnName="DATA_CAD" />
+          <ScalarProperty Name="DATA_ALT" ColumnName="DATA_ALT" />
+          <ScalarProperty Name="COD_ESTAB" ColumnName="COD_ESTAB" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_CONFIG_GERAIS">
+      <EntityTypeMapping TypeName="FirebirdModel.TB_CONFIG_GERAIS">
+        <MappingFragment StoreEntitySet="TB_CONFIG_GERAIS">
+          <ScalarProperty Name="ID_GRUPO_RPT_GARANTIA" ColumnName="ID_GRUPO_RPT_GARANTIA" />
+          <ScalarProperty Name="ID_GRUPO_SUCATA" ColumnName="ID_GRUPO_SUCATA" />
+          <ScalarProperty Name="ID_LOCAL_DEP_CONTROLADO" ColumnName="ID_LOCAL_DEP_CONTROLADO" />
+          <ScalarProperty Name="TP_SEPARACAO" ColumnName="TP_SEPARACAO" />
+          <ScalarProperty Name="ID_GRUPO_RPT_REPARO" ColumnName="ID_GRUPO_RPT_REPARO" />
+          <ScalarProperty Name="ID_GRUPO_NPA" ColumnName="ID_GRUPO_NPA" />
+          <ScalarProperty Name="ID_GRUPO_TEC_DESCONTINUADA" ColumnName="ID_GRUPO_TEC_DESCONTINUADA" />
+          <ScalarProperty Name="ID_GRUPO_TRIAGEM" ColumnName="ID_GRUPO_TRIAGEM" />
+          <ScalarProperty Name="ID_GRUPO_RPA" ColumnName="ID_GRUPO_RPA" />
+          <ScalarProperty Name="ID_RECUSA_DIV_QUANTIDADE_REC" ColumnName="ID_RECUSA_DIV_QUANTIDADE_REC" />
+          <ScalarProperty Name="ID_USER_ULT_ALT" ColumnName="ID_USER_ULT_ALT" />
+          <ScalarProperty Name="DT_ULT_ALTERACAO" ColumnName="DT_ULT_ALTERACAO" />
+          <ScalarProperty Name="ID_USER_INC" ColumnName="ID_USER_INC" />
+          <ScalarProperty Name="DT_INCLUSAO" ColumnName="DT_INCLUSAO" />
+          <ScalarProperty Name="FL_ANEXA_NF_RECEBIMENTO" ColumnName="FL_ANEXA_NF_RECEBIMENTO" />
+          <ScalarProperty Name="DS_PASTA_NF_RECEBIMENTO" ColumnName="DS_PASTA_NF_RECEBIMENTO" />
+          <ScalarProperty Name="ID_CONFIG" ColumnName="ID_CONFIG" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PCESTPRO_H">
+      <EntityTypeMapping TypeName="FirebirdModel.PCESTPRO_H">
+        <MappingFragment StoreEntitySet="PCESTPRO_H">
+          <ScalarProperty Name="USUARIO" ColumnName="USUARIO" />
+          <ScalarProperty Name="DT_TERMINO" ColumnName="DT_TERMINO" />
+          <ScalarProperty Name="DT_INICIO" ColumnName="DT_INICIO" />
+          <ScalarProperty Name="VERSAO" ColumnName="VERSAO" />
+          <ScalarProperty Name="TIPO" ColumnName="TIPO" />
+          <ScalarProperty Name="COD_ITEM" ColumnName="COD_ITEM" />
+          <ScalarProperty Name="ESTRUT_ID" ColumnName="ESTRUT_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PCESTPRO_I">
+      <EntityTypeMapping TypeName="FirebirdModel.PCESTPRO_I">
+        <MappingFragment StoreEntitySet="PCESTPRO_I">
+          <ScalarProperty Name="LIBERAINSUMO" ColumnName="LIBERAINSUMO" />
+          <ScalarProperty Name="EXPLAB" ColumnName="EXPLAB" />
+          <ScalarProperty Name="QTDE" ColumnName="QTDE" />
+          <ScalarProperty Name="INSUMO_PAI" ColumnName="INSUMO_PAI" />
+          <ScalarProperty Name="NIVEL" ColumnName="NIVEL" />
+          <ScalarProperty Name="INSUMO" ColumnName="INSUMO" />
+          <ScalarProperty Name="ITEM_ID" ColumnName="ITEM_ID" />
+          <ScalarProperty Name="ESTRUT_ID" ColumnName="ESTRUT_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_PRE_REC">
+      <EntityTypeMapping TypeName="FirebirdModel.TB_PRE_REC">
+        <MappingFragment StoreEntitySet="TB_PRE_REC">
+          <ScalarProperty Name="NR_NOTA_FISCAL_COMPRA" ColumnName="NR_NOTA_FISCAL_COMPRA" />
+          <ScalarProperty Name="DT_PEDIDO_COMPRA" ColumnName="DT_PEDIDO_COMPRA" />
+          <ScalarProperty Name="NR_PEDIDO_COMPRA" ColumnName="NR_PEDIDO_COMPRA" />
+          <ScalarProperty Name="DT_RECEBIMENTO" ColumnName="DT_RECEBIMENTO" />
+          <ScalarProperty Name="ID_TIPO_PRE_REC" ColumnName="ID_TIPO_PRE_REC" />
+          <ScalarProperty Name="ID_FLUXO" ColumnName="ID_FLUXO" />
+          <ScalarProperty Name="ID_MOTIVO_RECUSA" ColumnName="ID_MOTIVO_RECUSA" />
+          <ScalarProperty Name="ID_DEPOSITO_DESTINO" ColumnName="ID_DEPOSITO_DESTINO" />
+          <ScalarProperty Name="ST_PRE_REC" ColumnName="ST_PRE_REC" />
+          <ScalarProperty Name="ID_USER_ULT_ALT" ColumnName="ID_USER_ULT_ALT" />
+          <ScalarProperty Name="DT_ULT_ALTERACAO" ColumnName="DT_ULT_ALTERACAO" />
+          <ScalarProperty Name="ID_USER_INC" ColumnName="ID_USER_INC" />
+          <ScalarProperty Name="DT_INCLUSAO" ColumnName="DT_INCLUSAO" />
+          <ScalarProperty Name="DS_CAMINHO_NF" ColumnName="DS_CAMINHO_NF" />
+          <ScalarProperty Name="ID_DEPOSITO_ORIGEM" ColumnName="ID_DEPOSITO_ORIGEM" />
+          <ScalarProperty Name="DT_EMISSAO_NF" ColumnName="DT_EMISSAO_NF" />
+          <ScalarProperty Name="NR_SERIE" ColumnName="NR_SERIE" />
+          <ScalarProperty Name="NR_NOTA_FISCAL" ColumnName="NR_NOTA_FISCAL" />
+          <ScalarProperty Name="ID_PRE_REC" ColumnName="ID_PRE_REC" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_PREC_REC_ITEM">
+      <EntityTypeMapping TypeName="FirebirdModel.TB_PREC_REC_ITEM">
+        <MappingFragment StoreEntitySet="TB_PREC_REC_ITEM">
+          <ScalarProperty Name="DS_OBSERVACAO" ColumnName="DS_OBSERVACAO" />
+          <ScalarProperty Name="FL_TESTE_EXAME_VISUAL" ColumnName="FL_TESTE_EXAME_VISUAL" />
+          <ScalarProperty Name="FL_TESTE_FUNC_RAPIDO" ColumnName="FL_TESTE_FUNC_RAPIDO" />
+          <ScalarProperty Name="QT_REJEICAO" ColumnName="QT_REJEICAO" />
+          <ScalarProperty Name="ID_INSPEC" ColumnName="ID_INSPEC" />
+          <ScalarProperty Name="ID_ITEM_YEP" ColumnName="ID_ITEM_YEP" />
+          <ScalarProperty Name="ID_USER_ULT_ALT" ColumnName="ID_USER_ULT_ALT" />
+          <ScalarProperty Name="ID_ULT_ALTERACAO" ColumnName="ID_ULT_ALTERACAO" />
+          <ScalarProperty Name="ID_USER_INC" ColumnName="ID_USER_INC" />
+          <ScalarProperty Name="DT_INCLUSAO" ColumnName="DT_INCLUSAO" />
+          <ScalarProperty Name="QT_UNIDADE_VOLUME" ColumnName="QT_UNIDADE_VOLUME" />
+          <ScalarProperty Name="QT_VOLUME" ColumnName="QT_VOLUME" />
+          <ScalarProperty Name="ID_PRE_REC" ColumnName="ID_PRE_REC" />
+          <ScalarProperty Name="ID_PRE_REC_ITEM" ColumnName="ID_PRE_REC_ITEM" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

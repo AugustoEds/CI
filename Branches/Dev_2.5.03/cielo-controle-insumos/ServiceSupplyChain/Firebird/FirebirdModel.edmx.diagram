@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="0f49ec2c5c9a4436b3312253951e4abd" Name="Diagram1">
+        <EntityTypeShape EntityType="FirebirdModel.ESCADDEP" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FirebirdModel.ESCADPRO" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FirebirdModel.ESGRUPRO" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FirebirdModel.ESSUBPRO" Width="1.5" PointX="4.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FirebirdModel.TB_CONFIG_GERAIS" Width="1.5" PointX="7" PointY="8.75" />
+        <AssociationConnector Association="FirebirdModel.FK_TB_CONFIG_GERAIS_2" />
+        <AssociationConnector Association="FirebirdModel.FK_TB_CONFIG_GERAIS_3" />
+        <AssociationConnector Association="FirebirdModel.FK_TB_CONFIG_GERAIS_4" />
+        <AssociationConnector Association="FirebirdModel.FK_TB_CONFIG_GERAIS_5" />
+        <AssociationConnector Association="FirebirdModel.FK_TB_CONFIG_GERAIS_6" />
+        <AssociationConnector Association="FirebirdModel.FK_TB_CONFIG_GERAIS_8" />
+        <AssociationConnector Association="FirebirdModel.FK_TB_CONFIG_GERAIS_9" />
+        <EntityTypeShape EntityType="FirebirdModel.PCESTPRO_H" Width="1.5" PointX="7.375" PointY="0.75" />
+        <EntityTypeShape EntityType="FirebirdModel.PCESTPRO_I" Width="1.5" PointX="7.375" PointY="4.75" />
+        <EntityTypeShape EntityType="FirebirdModel.TB_PRE_REC" Width="1.5" PointX="3" PointY="19.75" />
+        <EntityTypeShape EntityType="FirebirdModel.TB_PREC_REC_ITEM" Width="1.5" PointX="9.25" PointY="13.75" />
+        <AssociationConnector Association="FirebirdModel.FK_TB_PRE_REC_1" />
+        <AssociationConnector Association="FirebirdModel.FK_TB_PRE_REC_2" />
+        <AssociationConnector Association="FirebirdModel.FK_TB_PREC_REC_ITEM_2" />
+        <AssociationConnector Association="FirebirdModel.FK_TB_PREC_REC_ITEM_1" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
